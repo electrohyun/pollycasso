@@ -42,7 +42,7 @@ Pollycasso는 [Modern Agile](https://github.com/modern-agile-team)의 10번째
 
 ### 요구 사항
 
-- Node.js 20.19 이상 또는 22.12 이상
+- Node.js 20.19 이상 또는 22.12 이상 (`.nvmrc` 권장 버전: 22.12)
 - pnpm 9
 
 ### 로컬 실행

@@ -1,12 +1,12 @@
 {
-  "name": "10term-pollycasso-front",
+  "name": "pollycasso",
   "private": true,
   "version": "1.0.0",
   "packageManager": "pnpm@9.15.9",
   "engines": {
     "node": "^20.19.0 || >=22.12.0"
   },
-  "description": "모던 애자일 10기 메인 프로젝트 '폴리카소' 프론트엔드 레포지토리",
+  "description": "smocket을 활용한 실시간 드로잉 배틀 게임 프론트엔드 프리뷰",
   "author": "electrohyun",
   "type": "module",
   "scripts": {
@@ -22,8 +22,7 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "chromatic": "npx chromatic"
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
@@ -35,7 +34,6 @@
     "axios": "^1.13.5",
     "clsx": "^2.1.1",
     "dayjs": "^1.11.18",
-    "dotenv": "^17.2.2",
     "framer-motion": "^12.23.12",
     "howler": "^2.2.4",
     "jwt-decode": "^4.0.0",
@@ -56,11 +54,9 @@
     "zustand": "^5.0.8"
   },
   "devDependencies": {
-    "@chromatic-com/storybook": "^4.1.1",
     "@eslint/js": "^9.33.0",
     "@storybook/addon-a11y": "^9.1.5",
     "@storybook/addon-docs": "^9.1.5",
-    "@storybook/addon-onboarding": "^9.1.5",
     "@storybook/addon-vitest": "^9.1.5",
     "@storybook/react-vite": "^9.1.5",
     "@types/howler": "^2.2.12",
@@ -72,9 +68,7 @@
     "@vheemstra/vite-plugin-imagemin": "^2.2.1",
     "@vitejs/plugin-react": "^5.0.0",
     "@vitest/browser": "^3.2.4",
-    "@vitest/coverage-v8": "^3.2.4",
     "autoprefixer": "^10.4.21",
-    "chromatic": "^13.1.4",
     "eslint": "^9.33.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-react": "^7.37.5",
