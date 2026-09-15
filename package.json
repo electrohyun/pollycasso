@@ -3,11 +3,15 @@
   "private": true,
   "version": "1.0.0",
   "packageManager": "pnpm@9.15.9",
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
   "description": "모던 애자일 10기 메인 프로젝트 '폴리카소' 프론트엔드 레포지토리",
   "author": "electrohyun",
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:mock": "vite --mode mock",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "fix": "eslint . --fix",

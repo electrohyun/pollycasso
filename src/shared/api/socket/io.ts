@@ -9,7 +9,7 @@ export const io = (
   uri: string,
   opts?: Partial<ManagerOptions & SocketOptions>,
 ): RealSocket => {
-  const useMock = import.meta.env.VITE_USE_MOCK === 'true';
+  const useMock = import.meta.env.VITE_USE_SOCKET_MOCK === 'true';
 
   if (useMock) {
     return new MockSocket() as unknown as RealSocket;

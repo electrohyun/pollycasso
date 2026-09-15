@@ -42,22 +42,50 @@ Pollycasso는 [Modern Agile](https://github.com/modern-agile-team)의 10번째
 
 ### 요구 사항
 
-- Node.js
-- pnpm
+- Node.js 20.19 이상 또는 22.12 이상
+- pnpm 9
 
 ### 로컬 실행
 
 ```bash
-pnpm install
+corepack enable
+pnpm install --frozen-lockfile
 pnpm dev
 ```
 
+일반 개발 환경은 `.env.example`을 `.env`로 복사한 뒤 각 연결 주소를 실행 환경에
+맞게 설정합니다.
+
+### 프리뷰 모킹 환경
+
+```bash
+pnpm dev:mock
+```
+
+이 명령은 `.env.mock`을 불러옵니다. HTTP 요청에는 MSW를 적용하고, 루트 소켓과
+`/waiting`, `/game`, `/friends`, `/chat` 네임스페이스에는 저장소 내부의 Socket.IO
+mock을 적용합니다. 현재 HTTP mock은 인증, 방 목록과 생성, 채팅용 친구와 채널
+요청을 다룹니다. 실제 게임 흐름에 필요한 시나리오는 이후 작업에서 확장합니다.
+
+### 환경 변수
+
+| 변수                    | 역할                                       |
+| ----------------------- | ------------------------------------------ |
+| `VITE_USE_MSW`          | 개발 환경에서 MSW HTTP mock 활성화         |
+| `VITE_USE_SOCKET_MOCK`  | Socket.IO 연결을 저장소 내부 mock으로 전환 |
+| `VITE_API_BASE_URL`     | HTTP API 기본 주소                         |
+| `VITE_SOCKET_URL`       | Socket.IO 연결 주소                        |
+| `VITE_SOCIAL_LOGIN_URL` | 소셜 로그인 진입 주소                      |
+| `VITE_ASSET_CDN_URL`    | 사운드와 의상 이미지 CDN 주소              |
+| `VITE_SECRET_PAGE`      | 관리자 화면 진입 경로                      |
+
 ### 명령어
 
-| 명령어 | 설명 |
-| --- | --- |
-| `pnpm dev` | Vite 개발 서버 실행 |
-| `pnpm build` | 타입 검사 후 애플리케이션 빌드 |
-| `pnpm lint` | ESLint 실행 |
-| `pnpm storybook` | Storybook 개발 서버 실행 |
-| `pnpm build-storybook` | Storybook 빌드 |
+| 명령어                 | 설명                                       |
+| ---------------------- | ------------------------------------------ |
+| `pnpm dev`             | Vite 개발 서버 실행                        |
+| `pnpm dev:mock`        | HTTP와 Socket.IO mock을 적용한 프리뷰 실행 |
+| `pnpm build`           | 타입 검사 후 애플리케이션 빌드             |
+| `pnpm lint`            | ESLint 실행                                |
+| `pnpm storybook`       | Storybook 개발 서버 실행                   |
+| `pnpm build-storybook` | Storybook 빌드                             |
