@@ -1,7 +1,8 @@
-import { useQuery } from '@tanstack/react-query';
 import { useEffect } from 'react';
-import { authQueries } from '../queries/authQueries';
+import { useQuery } from '@tanstack/react-query';
+
 import { useAuthStore } from '@/entities/user';
+import { authQueries } from '../queries/authQueries';
 
 export const useSyncUser = () => {
   const setProfile = useAuthStore((state) => state.setProfile);

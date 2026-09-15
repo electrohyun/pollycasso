@@ -1,19 +1,19 @@
-import { useEffect, useState, useCallback } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { useLocation, useNavigate, useParams } from 'react-router';
-import { getWaitingSocket } from '@/shared/api/socket';
-import type { RoomState, Player, SystemNotification } from '@/shared/model';
+
+import { useSound } from '@/entities/sound';
 import { useAuthStore } from '@/entities/user';
+import { getWaitingSocket } from '@/shared/api/socket';
+import { SOUND_ASSETS } from '@/shared/api/sound/assets';
+import { SoundManager } from '@/shared/api/sound/manager';
+import type { Player, RoomState, SystemNotification } from '@/shared/model';
+import { ENTRY_ERROR_MESSAGES } from '../constants/messages';
+import type { UpdateGameStatePayload } from '../model/types';
 import {
   selectCanStartGame,
   selectMe,
   selectTopBottomTeams,
 } from './roomSelectors';
-import { ENTRY_ERROR_MESSAGES } from '../constants/messages';
-import type { UpdateGameStatePayload } from '../model/types';
-import { useSound } from '@/entities/sound';
-import { SOUND_ASSETS } from '@/shared/api/sound/assets';
-import { SoundManager } from '@/shared/api/sound/manager';
-import type { UpdateGameStatePayload } from '@/features/lobby/model/types';
 
 export const useRoom = () => {
   const navigate = useNavigate();

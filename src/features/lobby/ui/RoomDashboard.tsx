@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router';
 import { ShoppingCartIcon } from '@heroicons/react/24/outline';
-import { Cog8ToothIcon, ArchiveBoxIcon } from '@heroicons/react/24/solid';
+import { ArchiveBoxIcon,Cog8ToothIcon } from '@heroicons/react/24/solid';
 
 import { GameChat } from '@/entities/chat';
 import { MenuButton } from './MenuButton';

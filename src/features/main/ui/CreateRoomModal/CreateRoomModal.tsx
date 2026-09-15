@@ -6,6 +6,10 @@ import { zodResolver } from '@hookform/resolvers/zod';
 
 import title from '@/assets/title.svg';
 import type { GameMode, Room } from '@/entities/room';
+import { useSound } from '@/entities/sound';
+import { getWaitingSocket } from '@/shared/api/socket';
+import { SOUND_ASSETS } from '@/shared/api/sound/assets';
+import { SoundManager } from '@/shared/api/sound/manager';
 import { cn } from '@/shared/lib';
 import { Spinner } from '@/shared/ui/Spinner';
 import { TITLE_PRESETS } from '../../constants/titles';
@@ -18,11 +22,6 @@ import { MaxPlayerSelector } from './MaxPlayerSelector';
 import { PasswordInput } from './PasswordInput';
 import { RoomTitleInput } from './RoomTitleInput';
 import { VisibilitySelector } from './VisibilitySelector';
-import { getWaitingSocket } from '@/shared/api/socket';
-
-import { useSound } from '@/entities/sound';
-import { SoundManager } from '@/shared/api/sound/manager';
-import { SOUND_ASSETS } from '@/shared/api/sound/assets';
 
 export const CreateRoomModal = () => {
   const navigate = useNavigate();

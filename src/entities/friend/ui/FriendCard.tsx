@@ -4,16 +4,17 @@ import {
   NoSymbolIcon,
   TrashIcon,
 } from '@heroicons/react/24/solid';
+
+import { useSound } from '@/entities/sound';
+import { SOUND_ASSETS } from '@/shared/api/sound/assets';
+import { SoundManager } from '@/shared/api/sound/manager';
+import { getOutfitImageUrl, OUTFIT_LAYERS } from '@/shared/lib/cdn';
 import { getLevelBadgeColor } from '../lib/badgeColor';
 import type {
   FriendAction,
   FriendProfile,
   FriendRelation,
 } from '../model/types';
-import { getOutfitImageUrl, OUTFIT_LAYERS } from '@/shared/lib/cdn';
-import { useSound } from '@/entities/sound';
-import { SoundManager } from '@/shared/api/sound/manager';
-import { SOUND_ASSETS } from '@/shared/api/sound/assets';
 
 interface FriendCardProps extends FriendProfile {
   relation: FriendRelation;

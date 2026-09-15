@@ -1,10 +1,11 @@
 import { overlay } from 'overlay-kit';
-import { ShopPurchaseModal } from './ShopPurchaseModal';
-import { cn } from '@/shared/lib';
+
 import type { Product } from '@/entities/product';
 import { useSound } from '@/entities/sound';
-import { SoundManager } from '@/shared/api/sound/manager';
 import { SOUND_ASSETS } from '@/shared/api/sound/assets';
+import { SoundManager } from '@/shared/api/sound/manager';
+import { cn } from '@/shared/lib';
+import { ShopPurchaseModal } from './ShopPurchaseModal';
 
 interface ShopPurchaseButtonProps {
   cart: Product[];

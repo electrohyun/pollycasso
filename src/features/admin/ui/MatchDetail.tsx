@@ -1,4 +1,5 @@
 import { InformationCircleIcon } from '@heroicons/react/24/outline';
+
 import type { Match } from '../model/types';
 
 interface MatchDetailProps {

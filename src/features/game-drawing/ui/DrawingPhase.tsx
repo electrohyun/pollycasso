@@ -1,10 +1,9 @@
 import { GameCanvas } from '@/entities/drawing';
-
 import { useDrawing } from '../model/useDrawing';
-import { useDrawingTools } from '../model/useDrawingTools';
 import { useDrawingShortcuts } from '../model/useDrawingShortcuts';
-import { DrawingToolbox } from './DrawingToolbox';
+import { useDrawingTools } from '../model/useDrawingTools';
 import { DrawingHistoryButtons } from './DrawingHistoryButtons';
+import { DrawingToolbox } from './DrawingToolbox';
 import { ShortcutGuide } from './ShortcutGuide';
 
 export const DrawingPhase = () => {

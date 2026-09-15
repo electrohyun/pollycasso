@@ -1,16 +1,17 @@
 import { useEffect, useMemo } from 'react';
+
 import { CharacterPreview } from '@/entities/character';
+import { useNudgeListener } from '@/features/lobby/model/useNudgeListener';
 import { useShopPreview } from '@/features/shop';
 import { MOCK_PRODUCTS } from '@/mocks/shop.mock';
+import { useWaitingSocket } from '@/shared/api/socket/WaitingSocketProvider';
+import { cn } from '@/shared/lib';
+import { BackButton } from '@/shared/ui/BackButton';
 import { WardrobeProductList } from '@/widgets/wardrobe';
 import {
   useWardrobeFilter,
   WARDROBE_ITEM_CATEGORIES,
 } from '@/widgets/wardrobe';
-import { cn } from '@/shared/lib';
-import { useWaitingSocket } from '@/shared/api/socket/WaitingSocketProvider';
-import { useNudgeListener } from '@/features/lobby/model/useNudgeListener';
-import { BackButton } from '@/shared/ui/BackButton';
 
 const USER_LEVEL = 3;
 

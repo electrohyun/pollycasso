@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react';
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
+
 import type { TableColumn } from '../model/types';
 
 interface GenericTableProps<Table> {

@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+
 import { useSocket } from '@/shared/api/socket';
 import { showToast } from '@/shared/ui/Toast';
 

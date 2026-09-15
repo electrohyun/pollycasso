@@ -1,10 +1,10 @@
 import { mutationOptions, queryOptions } from '@tanstack/react-query';
 
+import { getUser } from '../api/getUser';
 import { postLogin } from '../api/postLogin';
+import { postLogout } from '../api/postLogout';
 import { postRefreshToken } from '../api/postRefreshToken';
 import { postSignup } from '../api/postSignup';
-import { postLogout } from '../api/postLogout';
-import { getUser } from '../api/getUser';
 
 export const authQueries = {
   auth: () => ['auth'] as const,

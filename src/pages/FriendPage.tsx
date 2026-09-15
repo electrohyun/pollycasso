@@ -1,8 +1,8 @@
 import { useState } from 'react';
 
+import { useFriend } from '@/entities/friend';
 import { BackButton } from '@/features/add-friend/ui/BackButton';
 import { FriendHeader, FriendList } from '@/widgets/friend';
-import { useFriend } from '@/entities/friend';
 
 const FriendPage = () => {
   const [searchKeyword, setSearchKeyword] = useState('');

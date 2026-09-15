@@ -1,6 +1,6 @@
 import { StarIcon } from '@heroicons/react/24/solid';
 
-import { Coin, GoldBelt, SilverBelt, BronzeBelt, LaurelWreath } from '@/assets';
+import { BronzeBelt, Coin, GoldBelt, LaurelWreath,SilverBelt } from '@/assets';
 import { RANK_STYLES, SPOTLIGHT_STYLES } from '../constants/styles';
 
 const BELT_IMAGES = {

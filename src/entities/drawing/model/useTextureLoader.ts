@@ -36,7 +36,9 @@ export const useTextureLoader = () => {
 
         setTextures(newTextures);
         setIsLoaded(true);
-      } catch (error) {}
+      } catch {
+        setIsLoaded(false);
+      }
     };
 
     loadImages();

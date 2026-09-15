@@ -1,5 +1,5 @@
-import type { Product } from '../model/types';
 import { getShopItemUrl } from '@/shared/lib/assets';
+import type { Product } from '../model/types';
 
 interface ReceiptCardProps {
   product: Product;

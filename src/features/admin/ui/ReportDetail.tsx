@@ -1,4 +1,5 @@
 import { InformationCircleIcon } from '@heroicons/react/24/outline';
+
 import type { Report } from '../model/types';
 
 interface ReportDetailProps {

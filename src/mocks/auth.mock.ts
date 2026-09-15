@@ -1,8 +1,8 @@
 import { http, HttpResponse } from 'msw';
 
-function encode(obj: object) {
+const encode = (obj: object) => {
   return btoa(unescape(encodeURIComponent(JSON.stringify(obj))));
-}
+};
 
 const USERS = [
   {

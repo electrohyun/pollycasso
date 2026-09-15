@@ -1,9 +1,9 @@
+import { useSound } from '@/entities/sound';
+import { SOUND_ASSETS } from '@/shared/api/sound/assets';
+import { SoundManager } from '@/shared/api/sound/manager';
 import { cn } from '@/shared/lib';
 import { ROOM_FILTER_COLORS, ROOM_FILTERS } from '../../constants/filters';
 import { useRoomFilterStore } from '../../model/useRoomFilterStore';
-import { useSound } from '@/entities/sound';
-import { SoundManager } from '@/shared/api/sound/manager';
-import { SOUND_ASSETS } from '@/shared/api/sound/assets';
 
 export const RoomFilterTabs = () => {
   const { selectedFilter, setFilter } = useRoomFilterStore();

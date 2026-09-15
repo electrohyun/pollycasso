@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { BellAlertIcon, XMarkIcon } from '@heroicons/react/24/solid';
+
 import { Title } from '@/assets';
 
 interface NudgeModalProps {

@@ -1,12 +1,13 @@
-import { useState, useMemo, useEffect } from 'react';
+import { useEffect,useMemo, useState } from 'react';
+
 import { RankingBoard } from '@/assets';
+import type { PeriodId, RankingCriteria } from '@/features/ranking';
 import {
   RankingDropdown,
   RankingHeader,
   RankingRow,
   RankingSidebar,
 } from '@/features/ranking';
-import type { PeriodId, RankingCriteria } from '@/features/ranking';
 import { RANKING_MOCK_DATA } from '@/mocks/ranking.mock';
 import { BackButton } from '@/shared/ui/BackButton';
 

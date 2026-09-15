@@ -1,13 +1,13 @@
-import { OverlayProvider } from 'overlay-kit';
 import { ToastContainer } from 'react-toastify';
+import { OverlayProvider } from 'overlay-kit';
 
+import { SoundProvider } from '@/entities/sound';
+import { ChatSocketProvider } from '@/shared/api/socket/ChatSocketProvider';
+import { FriendSocketProvider } from '@/shared/api/socket/FriendSocketProvider';
 import { SocketGlobalAlert } from '@/shared/ui/SocketGlobalAlert';
 import QueryProvider from './queryProvider';
 import Router from './Router';
 import { SocketProvider } from './socketProvider';
-import { FriendSocketProvider } from '@/shared/api/socket/FriendSocketProvider';
-import { ChatSocketProvider } from '@/shared/api/socket/ChatSocketProvider';
-import { SoundProvider } from '@/entities/sound';
 
 const App = () => {
   return (

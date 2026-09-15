@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 
-import type { FinishedPlayer } from './types';
 import type { FinishContext, Player } from '@/shared/model';
+import type { FinishedPlayer } from './types';
 
 export const useGameFinished = (
   players: Player[],

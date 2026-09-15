@@ -1,14 +1,15 @@
 import { useEffect, useMemo } from 'react';
-import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import { useWaitingSocket } from '@/shared/api/socket/WaitingSocketProvider';
+import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
+
 import { useAuthStore } from '@/entities/user/model/useAuthStore';
-import { useCart } from './useCart';
-import type { CartItem } from './useCart';
+import { useWaitingSocket } from '@/shared/api/socket/WaitingSocketProvider';
+import { SHOP_CATEGORIES } from '../constants/shop.constants';
 import { shopQueries } from '../queries/shopQueries';
+import type { CartItem } from './useCart';
+import { useCart } from './useCart';
+import { useProductSorting } from './useProductSorting';
 import { useShopFilter } from './useShopFilter';
 import { useShopPreview } from './useShopPreview';
-import { useProductSorting } from './useProductSorting';
-import { SHOP_CATEGORIES } from '../constants/shop.constants';
 
 export const useShop = () => {
   const queryClient = useQueryClient();

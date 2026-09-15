@@ -1,9 +1,10 @@
 import { useState } from 'react';
+
+import { useSound } from '@/entities/sound';
+import { SOUND_ASSETS } from '@/shared/api/sound/assets';
+import { SoundManager } from '@/shared/api/sound/manager';
 import { SORT_OPTIONS } from '../constants/shop.constants';
 import type { CategoryType, SortType } from './types';
-import { useSound } from '@/entities/sound';
-import { SoundManager } from '@/shared/api/sound/manager';
-import { SOUND_ASSETS } from '@/shared/api/sound/assets';
 
 export const useShopFilter = () => {
   const { sfxVolume, isMuted } = useSound();

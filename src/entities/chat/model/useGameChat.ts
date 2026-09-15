@@ -1,12 +1,12 @@
 import type { KeyboardEvent } from 'react';
 import { useEffect, useRef, useState } from 'react';
 
+import { useSound } from '@/entities/sound';
 import { useAuthStore } from '@/entities/user';
 import { useWaitingSocket } from '@/shared/api/socket/WaitingSocketProvider';
-import type { ChatMessage } from '@/shared/model';
-import { useSound } from '@/entities/sound';
-import { SoundManager } from '@/shared/api/sound/manager';
 import { SOUND_ASSETS } from '@/shared/api/sound/assets';
+import { SoundManager } from '@/shared/api/sound/manager';
+import type { ChatMessage } from '@/shared/model';
 
 export const useGameChat = () => {
   // const { gameSocket } = useGameSocket();

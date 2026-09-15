@@ -7,12 +7,12 @@ import { AxiosError } from 'axios';
 
 import { useAuthStore } from '@/entities/user';
 import { parseAccessToken } from '@/shared/lib';
+import { getUser } from '../api/getUser';
 import { AUTH_MESSAGES } from '../constants/messages';
 import type { SignupFormValues } from '../lib/validators';
 import { signUpSchema } from '../lib/validators';
 import type { SignupFailureResponse } from '../model/types';
 import { authQueries } from '../queries/authQueries';
-import { getUser } from '../api/getUser';
 
 export const useSignup = () => {
   const navigate = useNavigate();

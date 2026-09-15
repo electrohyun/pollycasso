@@ -1,5 +1,5 @@
-export { RankingDropdown } from './ui/RankingDropdown';
-export { RankingRow } from './ui/RankingRow';
-export { RankingHeader } from './ui/RankingHeader';
-export { RankingSidebar } from './ui/RankingSidebar';
 export * from './model/types';
+export { RankingDropdown } from './ui/RankingDropdown';
+export { RankingHeader } from './ui/RankingHeader';
+export { RankingRow } from './ui/RankingRow';
+export { RankingSidebar } from './ui/RankingSidebar';

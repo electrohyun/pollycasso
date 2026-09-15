@@ -1,12 +1,12 @@
-import {
-  TrophyIcon,
-  PaintBrushIcon,
-  BoltIcon,
-  SparklesIcon,
-  BeakerIcon,
-  HandThumbUpIcon,
-} from '@heroicons/react/24/solid';
 import type { ElementType } from 'react';
+import {
+  BeakerIcon,
+  BoltIcon,
+  HandThumbUpIcon,
+  PaintBrushIcon,
+  SparklesIcon,
+  TrophyIcon,
+} from '@heroicons/react/24/solid';
 
 export type AchievementID =
   | 'COLOR_MASTER'

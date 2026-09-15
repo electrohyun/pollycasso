@@ -1,7 +1,8 @@
+import type { FormEvent, ReactNode } from 'react';
 import { useEffect } from 'react';
-import type { ReactNode } from 'react';
 import { createPortal } from 'react-dom';
 import { XMarkIcon } from '@heroicons/react/24/solid';
+
 import { Title } from '@/assets';
 
 interface ModalProps {
@@ -42,7 +43,7 @@ export const Modal = ({
 
   const Container = isForm ? 'form' : 'div';
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: FormEvent) => {
     if (isForm) {
       e.preventDefault();
       onConfirm?.();

@@ -1,6 +1,6 @@
 import { cn } from '@/shared/lib';
-import type { Product } from '../model/types';
 import { getShopItemUrl } from '@/shared/lib/assets';
+import type { Product } from '../model/types';
 
 interface WardrobeItemCardProps {
   product: Product;

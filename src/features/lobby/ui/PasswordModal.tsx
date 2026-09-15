@@ -1,4 +1,5 @@
 import { useState } from 'react';
+
 import { Modal } from '@/shared/ui/Modal';
 
 interface PasswordModalProps {

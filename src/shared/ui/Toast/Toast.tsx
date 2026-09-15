@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
-import { toast } from 'react-toastify';
 import type { ToastOptions } from 'react-toastify';
+import { toast } from 'react-toastify';
 import {
   CheckCircleIcon,
   ExclamationCircleIcon,

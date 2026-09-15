@@ -1,5 +1,5 @@
-import type { Player } from '@/shared/model';
 import { cn } from '@/shared/lib';
+import type { Player } from '@/shared/model';
 import { PlayerSlot } from './PlayerSlot';
 
 interface TeamSectionProps {

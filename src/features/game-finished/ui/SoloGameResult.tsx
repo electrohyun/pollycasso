@@ -1,9 +1,9 @@
 import { SoloPodium } from '@/assets';
 import { BACKGROUND_FIREWORKS, FOREGROUND_FIREWORKS } from '../model/fireworks';
-import { FireworksLayer } from './FireworksLayer';
-import { SoloPodiumSpot } from './SoloPodiumSpot';
-import { RankRow } from './RankRow';
 import type { FinishedPlayer } from '../model/types';
+import { FireworksLayer } from './FireworksLayer';
+import { RankRow } from './RankRow';
+import { SoloPodiumSpot } from './SoloPodiumSpot';
 
 interface SoloGameResultProps {
   results: FinishedPlayer[];

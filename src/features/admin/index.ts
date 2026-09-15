@@ -1,6 +1,6 @@
 export * from './model/types';
+export { useAdminKnock } from './model/useAdminKnock';
 export { AdminSidebar } from './ui/AdminSidebar';
-export { ReportDetail } from './ui/ReportDetail';
 export { GenericTable } from './ui/GenericTable';
 export { MatchDetail } from './ui/MatchDetail';
-export { useAdminKnock } from './model/useAdminKnock';
+export { ReportDetail } from './ui/ReportDetail';

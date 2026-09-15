@@ -1,9 +1,10 @@
 import { useState } from 'react';
-import type { RankingCriteria } from '../model/types';
-import { CRITERIA_LABELS } from '../constants/constants';
+
 import { useSound } from '@/entities/sound';
-import { SoundManager } from '@/shared/api/sound/manager';
 import { SOUND_ASSETS } from '@/shared/api/sound/assets';
+import { SoundManager } from '@/shared/api/sound/manager';
+import { CRITERIA_LABELS } from '../constants/constants';
+import type { RankingCriteria } from '../model/types';
 
 interface RankingDropdownProps {
   onSelect: (criteria: RankingCriteria) => void;

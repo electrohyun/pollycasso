@@ -1,8 +1,9 @@
 import { useNavigate } from 'react-router';
 import { ArrowUturnLeftIcon } from '@heroicons/react/24/outline';
+
 import { useSound } from '@/entities/sound';
-import { SoundManager } from '@/shared/api/sound/manager';
 import { SOUND_ASSETS } from '@/shared/api/sound/assets';
+import { SoundManager } from '@/shared/api/sound/manager';
 
 export const BackButton = () => {
   const navigate = useNavigate();

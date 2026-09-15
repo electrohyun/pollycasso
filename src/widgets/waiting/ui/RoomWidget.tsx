@@ -1,10 +1,10 @@
 import {
   RoomActionButtons,
   RoomDashboard,
+  RoomEntryGuard,
   TeamSection,
   TeamTab,
   useRoomUI,
-  RoomEntryGuard,
 } from '@/features/lobby';
 import { CreateRoomModal } from '@/features/main';
 
