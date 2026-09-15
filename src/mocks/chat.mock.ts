@@ -1,10 +1,10 @@
 import { http, HttpResponse } from 'msw';
 
-import type { Channel, Friend } from '@/shared/model';
+import type { ChatChannel, Friend } from '@/shared/model';
 
 interface ChannelOption {
   label: string;
-  value: Channel;
+  value: ChatChannel;
 }
 
 export const mockChannels: ChannelOption[] = [
@@ -13,11 +13,11 @@ export const mockChannels: ChannelOption[] = [
 ] as const;
 
 export const mockFriends: Friend[] = [
-  { id: 25, name: '테스트용계정2' },
-  { id: 2, name: '레전드백엔드' },
-  { id: 3, name: 'aa1' },
-  { id: 4, name: 'a' },
-  { id: 5, name: 'asdf11' },
+  { userId: 25, nickname: '테스트용계정2' },
+  { userId: 2, nickname: '레전드백엔드' },
+  { userId: 3, nickname: 'aa1' },
+  { userId: 4, nickname: 'a' },
+  { userId: 5, nickname: 'asdf11' },
 ] as const;
 
 export const chatHandlers = [

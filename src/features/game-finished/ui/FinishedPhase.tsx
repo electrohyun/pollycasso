@@ -1,9 +1,6 @@
 import { createPortal } from 'react-dom';
 
-import {
-  MOCK_FINISHED_ROOM_STATE,
-  MOCK_TEAM_FINISHED_ROOM_STATE,
-} from '@/mocks/finished.mock';
+import { MOCK_TEAM_FINISHED_ROOM_STATE } from '@/mocks/finished.mock';
 import type { FinishContext } from '@/shared/model';
 import { useLockBodyScroll } from '@/shared/model/useLockBodyScroll';
 import { useGameFinished } from '../model/useGameFinished';
@@ -19,7 +16,7 @@ export const FinishedPhase = () => {
 
   const results = useGameFinished(players, finishContext);
 
-  const isTeamMode = true;
+  const isTeamMode = settings.gameMode === 'TEAM';
 
   useLockBodyScroll();
 

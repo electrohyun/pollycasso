@@ -28,7 +28,10 @@ export const useGameSubmission = (): GameSubmissionState => {
 
   const isMeReady = useMemo(() => {
     if (!user) return false;
-    return players.find((p) => p.userId === user.id)?.isReady ?? false;
+    return (
+      players.find((p) => String(p.userId) === String(user.id))?.isReady ??
+      false
+    );
   }, [players, user]);
 
   const toggleReady = useCallback(() => {

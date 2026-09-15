@@ -30,6 +30,7 @@ const MyPage = () => {
 
       <Sidebar
         nickname={user.nickname}
+        tag={user.tag}
         level={user.level!}
         currentXp={user.currentExp!}
         coin={user.coin!}

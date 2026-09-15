@@ -109,6 +109,7 @@ export const MOCK_PLAYERS: Player[] = [
 ];
 
 export const MOCK_FINISH_CONTEXT: FinishContext = {
+  kind: 'FINISHED',
   results: [
     {
       userId: 'user_1',

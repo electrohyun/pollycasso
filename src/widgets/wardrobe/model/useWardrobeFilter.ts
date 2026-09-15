@@ -34,7 +34,7 @@ export const useWardrobeFilter = () => {
 
   const currentFilterLabel =
     activeTab === 'SKILL'
-      ? SHOP_CATEGORIES['SKILL']
+      ? SHOP_CATEGORIES.ITEM
       : SHOP_CATEGORIES[itemCategory];
 
   const itemButtonLabel =

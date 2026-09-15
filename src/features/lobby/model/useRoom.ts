@@ -193,8 +193,8 @@ export const useRoom = () => {
   const startGame = () => waitingSocket.emit('game:startRequest');
   const toggleReady = () => waitingSocket.emit('room:readyToggle');
   const changeTeam = (targetTeam: 'BLUE' | 'RED' | 'NONE') => {
-    if (!me || me.team === targetTeam) return;
-    waitingSocket.emit('room:changeTeam', { targetTeam });
+    if (!me || me.teamId === targetTeam) return;
+    waitingSocket.emit('room:changeTeam', { targetTeamId: targetTeam });
   };
   const kickUser = (targetUserId: string | number) =>
     waitingSocket.emit('room:kickUser', { targetUserId: Number(targetUserId) });

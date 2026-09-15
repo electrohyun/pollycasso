@@ -1,6 +1,7 @@
 import { lazy, Suspense } from 'react';
-import { createBrowserRouter, Outlet,RouterProvider } from 'react-router';
+import { createBrowserRouter, Outlet, RouterProvider } from 'react-router';
 
+import { MOCK_GAME_SELECTING } from '@/mocks/game.mock';
 import { GameSocketProvider } from '@/shared/api/socket/GameSocketProvider';
 // import { GameSocketProvider } from '@/shared/api/socket/GameSocketProvider';
 // import { SoundProvider } from '@/entities/sound';
@@ -49,7 +50,17 @@ const router = createBrowserRouter([
               { path: '/wardrobe', element: <WardrobePage /> },
               { path: '/ranking', element: <RankingPage /> },
               { path: '/mypage', element: <MyPage /> },
-              { path: '/dev/gameWidget', element: <GameWidget /> },
+              {
+                path: '/dev/gameWidget',
+                element: (
+                  <GameWidget
+                    phase={MOCK_GAME_SELECTING.status}
+                    endsAt={MOCK_GAME_SELECTING.endsAt}
+                    phaseContext={MOCK_GAME_SELECTING.phaseContext}
+                    playerMap={{}}
+                  />
+                ),
+              },
               {
                 path: '/rooms/:roomId',
                 element: (

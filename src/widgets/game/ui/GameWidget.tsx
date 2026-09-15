@@ -20,7 +20,6 @@ import { PHASE_TIME } from '@/shared/model';
 import { useGameState } from '../model/useGameState';
 import { useGameSubmission } from '../model/useGameSubmission';
 import { useThemeInput } from '../model/useThemeInput';
-import { useThemeSelecting } from '../model/useThemeSelecting';
 
 interface GameWidgetProps {
   phase: RoomStatus;

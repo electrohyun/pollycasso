@@ -4,7 +4,7 @@ import { getMessageDisplayData } from '../lib/message.lib';
 
 interface MessageItemProps {
   msg: ChatMessage;
-  currentUserId?: string;
+  currentUserId?: number | string;
   showChannelTag?: boolean;
 }
 

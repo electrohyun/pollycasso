@@ -11,7 +11,7 @@ interface MessageDisplayData {
 
 export const getMessageDisplayData = (
   msg: ChatMessage,
-  currentUserId?: string,
+  currentUserId?: number | string,
   showChannelTag?: boolean,
 ): MessageDisplayData => {
   const isSystem = msg.channel === 'system';

@@ -2,7 +2,6 @@ import { useEffect, useMemo, useState } from 'react';
 
 import { useAuthStore } from '@/entities/user';
 import { MOCK_GAME_SELECTING } from '@/mocks/game.mock';
-import { SOCKET_EVENTS } from '@/shared/api/socket';
 import { useGameSocket } from '@/shared/api/socket/GameSocketProvider';
 import type { DrawingContext, Player, RoomState } from '@/shared/model';
 
@@ -38,7 +37,7 @@ export const useGameState = () => {
 
   const myData = useMemo(() => {
     if (!user) return null;
-    return players.find((p: Player) => p.userId === user.id);
+    return players.find((p: Player) => String(p.userId) === String(user.id));
   }, [players, user]);
 
   const inventory = myData?.inventory || [];

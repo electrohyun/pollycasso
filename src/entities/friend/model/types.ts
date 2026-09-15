@@ -15,6 +15,10 @@ export interface FriendProfile {
   isOnline: boolean;
 }
 
+export interface FriendWithRelation extends FriendProfile {
+  relation: FriendRelation;
+}
+
 export type FriendAction =
   | 'ACCEPT'
   | 'CANCEL'

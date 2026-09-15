@@ -26,7 +26,7 @@ export const DrawingToolbox = ({
   return (
     <div className="flex items-center w-[920px] h-[90px] px-8 py-5 bg-gradient-to-r rounded-3xl from-[#909090] to-[#D4D4D4] gap-x-4 shadow-[inset_0_4px_10px_rgba(0,0,0,0.2)]">
       <ToolSelector
-        activeTool={activeTool}
+        activeTool={isEraserActive ? 'pencil' : activeTool}
         onSelectTool={onToolChange}
         activeColor={ACTIVE_COLOR}
       />

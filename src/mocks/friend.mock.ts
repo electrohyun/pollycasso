@@ -1,48 +1,60 @@
-import type { FriendProfile, FriendRelation } from '@/entities/friend';
+import type { FriendProfile, FriendWithRelation } from '@/entities/friend';
 import { SOCKET_EVENTS } from '@/shared/api/socket';
 import type { MockSocket } from '@/shared/api/socket/mockSocket';
+import type { Outfit } from '@/shared/model';
 
-export interface FriendWithRelation extends FriendProfile {
-  relation: FriendRelation;
-}
+const MOCK_OUTFIT: Outfit = {
+  bird: 'bird_01',
+  accessory: null,
+  hat: null,
+  top: null,
+  bottom: null,
+  shoes: null,
+  effect: null,
+};
 
 export const MOCK_FRIENDS: FriendWithRelation[] = [
   {
     userId: 1,
-    nickname: '그림쟁이#1234',
-    outfit: 'https://api.dicebear.com/7.x/miniavs/svg?seed=Art',
+    nickname: '그림쟁이',
+    tag: '#1234',
+    outfit: MOCK_OUTFIT,
     level: 25,
     isOnline: true,
     relation: 'FRIEND',
   },
   {
     userId: 2,
-    nickname: '밤샘코딩#5678',
-    outfit: 'https://api.dicebear.com/7.x/miniavs/svg?seed=Code',
+    nickname: '밤샘코딩',
+    tag: '#5678',
+    outfit: MOCK_OUTFIT,
     level: 10,
     isOnline: false,
     relation: 'FRIEND',
   },
   {
     userId: 3,
-    nickname: '친추주세요#1111',
-    outfit: 'https://api.dicebear.com/7.x/miniavs/svg?seed=Req',
+    nickname: '친추주세요',
+    tag: '#1111',
+    outfit: MOCK_OUTFIT,
     level: 5,
     isOnline: true,
     relation: 'REQUEST_RECEIVED',
   },
   {
     userId: 4,
-    nickname: '묵묵부답#2222',
-    outfit: 'https://api.dicebear.com/7.x/miniavs/svg?seed=Wait',
+    nickname: '묵묵부답',
+    tag: '#2222',
+    outfit: MOCK_OUTFIT,
     level: 1,
     isOnline: false,
     relation: 'REQUEST_SENT',
   },
   {
     userId: 5,
-    nickname: '비매너유저#9999',
-    outfit: 'https://api.dicebear.com/7.x/miniavs/svg?seed=Block',
+    nickname: '비매너유저',
+    tag: '#9999',
+    outfit: MOCK_OUTFIT,
     level: 99,
     isOnline: false,
     relation: 'BLOCKED',
@@ -52,22 +64,25 @@ export const MOCK_FRIENDS: FriendWithRelation[] = [
 export const MOCK_RECOMMENDED: FriendProfile[] = [
   {
     userId: 101,
-    nickname: '뉴비환영#0001',
-    outfit: 'https://api.dicebear.com/7.x/miniavs/svg?seed=New',
+    nickname: '뉴비환영',
+    tag: '#0001',
+    outfit: MOCK_OUTFIT,
     level: 2,
     isOnline: true,
   },
   {
     userId: 102,
-    nickname: '같이놀아요#0002',
-    outfit: 'https://api.dicebear.com/7.x/miniavs/svg?seed=Play',
+    nickname: '같이놀아요',
+    tag: '#0002',
+    outfit: MOCK_OUTFIT,
     level: 15,
     isOnline: false,
   },
   {
     userId: 103,
-    nickname: '고수등장#7777',
-    outfit: 'https://api.dicebear.com/7.x/miniavs/svg?seed=Gosu',
+    nickname: '고수등장',
+    tag: '#7777',
+    outfit: MOCK_OUTFIT,
     level: 50,
     isOnline: true,
   },
