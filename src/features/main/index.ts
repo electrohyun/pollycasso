@@ -5,6 +5,6 @@ export * from './lib/validators';
 export { useCreateRoomModalStore } from './model/useCreateRoomModalStore';
 export { useSearchStore } from './model/useSearchStore';
 export { CreateRoomModal } from './ui/CreateRoomModal/CreateRoomModal';
+export { KickModal } from './ui/KickModal';
 export { MainHeader } from './ui/MainHeader/MainHeader';
 export { RoomList } from './ui/RoomList/RoomList';
-export { KickModal } from './ui/KickModal';

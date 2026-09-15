@@ -1,8 +1,9 @@
 import { motion } from 'framer-motion';
+
 import { useAuthStore } from '@/entities/user';
-import { OUTFIT_LAYERS } from '@/shared/lib/cdn';
+import { useWelcomeLogic,welcomeVariants } from '@/features/welcome';
 import { getOutfitItemUrl } from '@/shared/lib/assets';
-import { welcomeVariants, useWelcomeLogic } from '@/features/welcome';
+import { OUTFIT_LAYERS } from '@/shared/lib/cdn';
 
 const WelcomePage = () => {
   const user = useAuthStore((state) => state.user);

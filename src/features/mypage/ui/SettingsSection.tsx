@@ -1,8 +1,8 @@
-import { useSoundStore } from '@/entities/sound';
 import { useEnvironmentStore } from '@/entities/environment';
+import { useSoundStore } from '@/entities/sound';
+import { SOUND_ASSETS } from '@/shared/api/sound/assets';
 import { SoundManager } from '@/shared/api/sound/manager';
 import { RangeSlider } from './RangeSlider';
-import { SOUND_ASSETS } from '@/shared/api/sound/assets';
 
 export const SettingsSection = () => {
   const { bgmVolume, sfxVolume, setBgmVolume, setSfxVolume } = useSoundStore();

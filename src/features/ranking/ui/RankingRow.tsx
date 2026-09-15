@@ -1,7 +1,7 @@
 import { Crown } from '@/assets';
 import { maskId } from '@/shared/lib/mask';
-import { MiniAvatar } from './MiniAvatar';
 import type { RankingUser } from '../model/types';
+import { MiniAvatar } from './MiniAvatar';
 
 interface RankingRowProps {
   user: RankingUser;

@@ -1,15 +1,17 @@
+import type { MouseEvent } from 'react';
 import { useState } from 'react';
 import {
-  XMarkIcon,
   BellAlertIcon,
   CheckCircleIcon,
+  XMarkIcon,
 } from '@heroicons/react/24/solid';
+
 import { Crown } from '@/assets';
 import { cn } from '@/shared/lib';
-import { ScalableText } from './ScalableText';
 import { getOutfitImageUrl, OUTFIT_LAYERS } from '@/shared/lib/cdn';
-import type { Player } from '@/shared/model';
 import { getLevelColor } from '@/shared/lib/color';
+import type { Player } from '@/shared/model';
+import { ScalableText } from './ScalableText';
 
 interface PlayerSlotProps {
   player?: Player;
@@ -68,7 +70,7 @@ export const PlayerSlot = ({
   // 재촉 가능 조건 (바쁨 + 재촉 기능 활성화됨)
   const canNudge = !!onNudge && isBusy;
 
-  const handleNudgeClick = (e: React.MouseEvent) => {
+  const handleNudgeClick = (e: MouseEvent) => {
     e.stopPropagation();
     if (isCoolingDown) return;
 

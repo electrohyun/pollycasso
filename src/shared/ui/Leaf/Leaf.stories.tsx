@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { Leaf } from './Leaf';
+
 import { LeafGreen, LeafYellow } from '@/assets';
+import { Leaf } from './Leaf';
 
 const meta = {
   title: 'shared/ui/Leaf',

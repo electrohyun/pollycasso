@@ -2,7 +2,6 @@ import { StarIcon } from '@heroicons/react/24/solid';
 
 import { GoldMedal } from '@/assets';
 import type { TeamScore } from '@/shared/model';
-
 import { BACKGROUND_FIREWORKS, FOREGROUND_FIREWORKS } from '../model/fireworks';
 import type { FinishedPlayer } from '../model/types';
 import { useTeamGameResult } from '../model/useTeamGameResult';

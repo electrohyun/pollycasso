@@ -1,13 +1,13 @@
 import { lazy, Suspense } from 'react';
-import { createBrowserRouter, RouterProvider, Outlet } from 'react-router';
+import { createBrowserRouter, Outlet,RouterProvider } from 'react-router';
 
-import { RootLayout } from '@/shared/ui/RootLayout';
-import { Spinner } from '@/shared/ui/Spinner';
-import PrivateRoute from './PrivateRoute';
+import { GameSocketProvider } from '@/shared/api/socket/GameSocketProvider';
 // import { GameSocketProvider } from '@/shared/api/socket/GameSocketProvider';
 // import { SoundProvider } from '@/entities/sound';
 import { WaitingSocketProvider } from '@/shared/api/socket/WaitingSocketProvider';
-import { GameSocketProvider } from '@/shared/api/socket/GameSocketProvider';
+import { RootLayout } from '@/shared/ui/RootLayout';
+import { Spinner } from '@/shared/ui/Spinner';
+import PrivateRoute from './PrivateRoute';
 
 const LoginPage = lazy(() => import('@/pages/LoginPage'));
 const LoginCallbackPage = lazy(() => import('@/pages/LoginCallbackPage'));

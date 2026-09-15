@@ -1,9 +1,9 @@
 import { Coin } from '@/assets';
-import type { Product } from '../model/types';
+import { SHOP_CATEGORIES } from '@/features/shop/constants/shop.constants';
 import { cn } from '@/shared/lib';
 import { getShopItemUrl } from '@/shared/lib/assets';
 import { getLevelColor } from '@/shared/lib/color';
-import { SHOP_CATEGORIES } from '@/features/shop/constants/shop.constants';
+import type { Product } from '../model/types';
 
 interface ProductItemProps {
   product: Product;

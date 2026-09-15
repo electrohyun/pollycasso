@@ -1,5 +1,5 @@
-import { DRAWING_CONSTANTS } from '../constants/drawingConstants';
 import type { RGBA } from '@/entities/drawing';
+import { DRAWING_CONSTANTS } from '../constants/drawingConstants';
 
 export const isWhiteColor = (color: string) =>
   color.toUpperCase() === '#FFFFFF';

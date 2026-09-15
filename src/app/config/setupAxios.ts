@@ -1,4 +1,5 @@
 import { AxiosError } from 'axios';
+
 import { useAuthStore } from '@/entities/user';
 import { postRefreshToken } from '@/features/auth';
 import { instance } from '@/shared/api';

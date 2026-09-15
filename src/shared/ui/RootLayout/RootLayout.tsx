@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
 import { Outlet, useLocation } from 'react-router';
 
+import { useEnvironmentStore } from '@/entities/environment';
+// TODO: FSD 위반 import 리팩토링
+import { SoundButton } from '@/features/sound';
 import type { LeafData } from '@/shared/lib';
 import { cn, createLeafData } from '@/shared/lib';
 import { Leaf } from '@/shared/ui/Leaf';
 import { ROUTE_CONFIG } from '@/shared/ui/RootLayout/RootLayout.config';
-// TODO: FSD 위반 import 리팩토링
-import { SoundButton } from '@/features/sound';
-import { useEnvironmentStore } from '@/entities/environment';
 
 export const RootLayout = () => {
   const { pathname } = useLocation();

@@ -1,5 +1,5 @@
-import { useState } from 'react';
 import type { ChangeEvent } from 'react';
+import { useState } from 'react';
 import {
   FaceSmileIcon,
   MagnifyingGlassIcon,
@@ -7,11 +7,11 @@ import {
 import { FaceFrownIcon, XMarkIcon } from '@heroicons/react/24/solid';
 
 import { Title } from '@/assets';
-import { RecommendedFriendCard } from '@/entities/friend/ui/RecommendedFriendCard';
 import { useFriend } from '@/entities/friend';
+import { RecommendedFriendCard } from '@/entities/friend/ui/RecommendedFriendCard';
 import { useSound } from '@/entities/sound';
-import { SoundManager } from '@/shared/api/sound/manager';
 import { SOUND_ASSETS } from '@/shared/api/sound/assets';
+import { SoundManager } from '@/shared/api/sound/manager';
 
 interface AddFriendModalProps {
   onClose: () => void;

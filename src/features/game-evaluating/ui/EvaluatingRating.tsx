@@ -1,5 +1,5 @@
-import { StarIcon } from '@heroicons/react/24/solid';
 import { StarIcon as StarOutlineIcon } from '@heroicons/react/24/outline';
+import { StarIcon } from '@heroicons/react/24/solid';
 
 interface EvaluationRatingProps {
   displayScore: number;

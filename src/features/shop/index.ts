@@ -1,10 +1,10 @@
 export * from './constants/shop.constants';
 export * from './model/types';
-export { useShopFilter } from './model/useShopFilter';
-export { useShopPreview } from './model/useShopPreview';
+export type { CartItem } from './model/useCart';
+export { useCart } from './model/useCart';
 export { useProductSorting } from './model/useProductSorting';
 export { useShop } from './model/useShop';
+export { useShopFilter } from './model/useShopFilter';
+export { useShopPreview } from './model/useShopPreview';
 export { shopQueries } from './queries/shopQueries';
-export { useCart } from './model/useCart';
-export type { CartItem } from './model/useCart';
 export { ShopPurchaseButton } from './ui/ShopPurchaseButton';

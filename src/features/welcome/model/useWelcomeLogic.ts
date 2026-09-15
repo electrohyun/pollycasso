@@ -1,5 +1,6 @@
-import { useEffect, useState, useMemo } from 'react';
+import { useEffect, useMemo,useState } from 'react';
 import { useNavigate } from 'react-router';
+
 import type { User } from '@/entities/user';
 
 export const useWelcomeLogic = (user: User | null) => {

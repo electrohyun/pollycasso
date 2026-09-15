@@ -1,5 +1,6 @@
-import { Modal } from '@/shared/ui/Modal';
 import { ExclamationTriangleIcon } from '@heroicons/react/24/outline';
+
+import { Modal } from '@/shared/ui/Modal';
 
 interface KickModalProps {
   onConfirm: () => void;

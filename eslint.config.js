@@ -16,6 +16,7 @@ export default tseslint.config(
   {
     files: ['**/*.{ts,tsx}'],
     plugins: {
+      '@typescript-eslint': tseslint.plugin,
       react,
       'react-hooks': reactHooks,
       'simple-import-sort': simpleImportSort,
@@ -78,6 +79,7 @@ export default tseslint.config(
     },
     rules: {
       ...reactRefresh.configs.vite.rules,
+      'react-refresh/only-export-components': 'warn',
     },
   },
   {

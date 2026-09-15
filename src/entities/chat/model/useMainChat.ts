@@ -1,26 +1,26 @@
-import { useEffect, useRef, useState, type KeyboardEvent } from 'react';
+import { type KeyboardEvent,useEffect, useRef, useState } from 'react';
 
-import {
-  isEmptyOrAt,
-  parseWhisper,
-  isAtOnly,
-} from '@/entities/chat/lib/mention.lib';
 import {
   CHANNEL_TYPES,
   CHAT_CHANNELS,
-  DEFAULT_CHANNEL,
   type ChatChannel,
+  DEFAULT_CHANNEL,
 } from '@/entities/chat';
-import { useFriendStore } from '@/entities/friend';
+import {
+  isAtOnly,
+  isEmptyOrAt,
+  parseWhisper,
+} from '@/entities/chat/lib/mention.lib';
 import type { FriendProfile } from '@/entities/friend';
+import { useFriendStore } from '@/entities/friend';
+import { useSound } from '@/entities/sound';
 import { useAuthStore } from '@/entities/user';
 import { useChatSocket } from '@/shared/api/socket/ChatSocketProvider';
 import { useFriendSocket } from '@/shared/api/socket/FriendSocketProvider';
+import { SOUND_ASSETS } from '@/shared/api/sound/assets';
+import { SoundManager } from '@/shared/api/sound/manager';
 import type { ChatMessage, Friend } from '@/shared/model';
 import { getSystemMessageText } from '../lib/message.lib';
-import { useSound } from '@/entities/sound';
-import { SoundManager } from '@/shared/api/sound/manager';
-import { SOUND_ASSETS } from '@/shared/api/sound/assets';
 
 export const useMainChat = () => {
   const { chatSocket } = useChatSocket();

@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo } from 'react';
+
 import { useFriendSocket } from '@/shared/api/socket/FriendSocketProvider';
 import { useFriendStore } from './friendStore';
 

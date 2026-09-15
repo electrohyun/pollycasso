@@ -2,6 +2,7 @@
   "name": "10term-pollycasso-front",
   "private": true,
   "version": "1.0.0",
+  "packageManager": "pnpm@9.15.9",
   "description": "모던 애자일 10기 메인 프로젝트 '폴리카소' 프론트엔드 레포지토리",
   "author": "electrohyun",
   "type": "module",

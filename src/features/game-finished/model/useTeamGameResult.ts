@@ -2,7 +2,6 @@ import { useMemo } from 'react';
 
 import { BluePodium, RedPodium, SoloPodium } from '@/assets';
 import type { TeamScore } from '@/shared/model';
-
 import type { FinishedPlayer } from '../model/types';
 
 export const useTeamGameResult = (

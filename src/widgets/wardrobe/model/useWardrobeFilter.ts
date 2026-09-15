@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import { SHOP_CATEGORIES } from '@/features/shop';
+
 import type { CategoryType } from '@/features/shop';
+import { SHOP_CATEGORIES } from '@/features/shop';
 
 export const useWardrobeFilter = () => {
   const [activeTab, setActiveTab] = useState<'ITEM' | 'SKILL'>('ITEM');

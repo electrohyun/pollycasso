@@ -1,8 +1,9 @@
 import { overlay } from 'overlay-kit';
-import { AddFriendModal } from './AddFriendModal';
+
 import { useSound } from '@/entities/sound';
-import { SoundManager } from '@/shared/api/sound/manager';
 import { SOUND_ASSETS } from '@/shared/api/sound/assets';
+import { SoundManager } from '@/shared/api/sound/manager';
+import { AddFriendModal } from './AddFriendModal';
 
 export const AddFriendButton = ({
   recommendedFriends,

@@ -1,10 +1,10 @@
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import { BellIcon } from '@heroicons/react/24/solid';
 
-import { AddFriendButton } from '@/features/add-friend';
 import { useSound } from '@/entities/sound';
-import { SoundManager } from '@/shared/api/sound/manager';
+import { AddFriendButton } from '@/features/add-friend';
 import { SOUND_ASSETS } from '@/shared/api/sound/assets';
+import { SoundManager } from '@/shared/api/sound/manager';
 
 interface FriendHeaderProps {
   value: string;

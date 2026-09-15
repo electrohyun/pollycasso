@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
+
 import { ValidationIcon } from './ValidationIcon';
 
 const meta: Meta<typeof ValidationIcon> = {

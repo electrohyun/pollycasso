@@ -1,7 +1,7 @@
 import title from '@/assets/title.svg';
+import { useAdminKnock } from '@/features/admin';
 import { LoginForm, SignupLink, SocialLoginButtons } from '@/features/auth';
 import { AuthLayout } from '@/widgets/auth/ui/AuthLayout';
-import { useAdminKnock } from '@/features/admin';
 
 const LoginPage = () => {
   const { handleKnock } = useAdminKnock();

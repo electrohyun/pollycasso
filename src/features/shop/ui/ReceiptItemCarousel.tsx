@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import { ReceiptCard } from '@/entities/product';
+
 import type { Product } from '@/entities/product';
+import { ReceiptCard } from '@/entities/product';
 
 const ITEMS_PER_PAGE = 3;
 

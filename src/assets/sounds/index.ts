@@ -1,3 +1,4 @@
+export { default as Chat } from './sfx_chat.mp3';
 export { default as Click } from './sfx_click.wav';
 export { default as Countdown } from './sfx_countdown.mp3';
 export { default as EmojiHappy } from './sfx_emoji_happy.wav';
@@ -16,4 +17,3 @@ export { default as ShopCart } from './sfx_shop_cart.mp3';
 export { default as ThemeSelected } from './sfx_theme_selected.wav';
 export { default as Timer } from './sfx_timer.wav';
 export { default as Timer2x } from './sfx_timer_2x.wav';
-export { default as Chat } from './sfx_chat.mp3';

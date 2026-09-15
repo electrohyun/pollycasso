@@ -1,7 +1,8 @@
 import { useNavigate } from 'react-router';
-import { useRoom } from '../model/useRoom';
+
 // TODO: FSD 원칙 위반 -> 리팩터링 필요
 import { useCreateRoomModalStore } from '@/features/main';
+import { useRoom } from '../model/useRoom';
 
 export const useRoomUI = () => {
   const navigate = useNavigate();

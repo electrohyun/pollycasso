@@ -1,8 +1,9 @@
 import { useMemo } from 'react';
+
+import type { Product } from '@/entities/product';
+import { SHOP_CATEGORIES } from '@/features/shop/constants/shop.constants';
 import { cn } from '@/shared/lib';
 import { getOutfitItemUrl } from '@/shared/lib/assets';
-import { SHOP_CATEGORIES } from '@/features/shop/constants/shop.constants';
-import type { Product } from '@/entities/product';
 
 const DEFAULT_BIRD_ID = 'bird_01';
 

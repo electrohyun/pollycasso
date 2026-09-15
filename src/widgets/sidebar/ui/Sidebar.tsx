@@ -1,11 +1,12 @@
 import { useNavigate } from 'react-router';
-import type { Outfit } from '@/shared/model';
-import { getOutfitImageUrl, OUTFIT_LAYERS } from '@/shared/lib/cdn';
+
 import { Coin } from '@/assets';
 import { useSound } from '@/entities/sound';
-import { SoundManager } from '@/shared/api/sound/manager';
-import { SOUND_ASSETS } from '@/shared/api/sound/assets';
 import { ScalableText } from '@/features/lobby';
+import { SOUND_ASSETS } from '@/shared/api/sound/assets';
+import { SoundManager } from '@/shared/api/sound/manager';
+import { getOutfitImageUrl, OUTFIT_LAYERS } from '@/shared/lib/cdn';
+import type { Outfit } from '@/shared/model';
 
 interface MenuItem {
   label: string;

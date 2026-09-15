@@ -1,7 +1,7 @@
 import { GameCanvas } from '@/entities/drawing';
 import { useRoundSummary } from '../model/useRoundSummary';
-import { RoundSummaryNavigation } from './RoundSummaryNavigation';
 import { RoundSummaryDetails } from './RoundSummaryDetails';
+import { RoundSummaryNavigation } from './RoundSummaryNavigation';
 
 export const RoundSummaryPhase = () => {
   const { ranking, selectedRank, currentResult, handleRankSelect } =

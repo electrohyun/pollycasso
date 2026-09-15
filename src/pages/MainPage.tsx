@@ -1,21 +1,21 @@
+import { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router';
 
 import { MainChat } from '@/entities/chat';
+import { useSound } from '@/entities/sound';
 import { useAuthStore } from '@/entities/user';
 import { useLogout } from '@/features/auth';
 import {
   CreateRoomModal,
+  KickModal,
   MainHeader,
   RoomList,
   useCreateRoomModalStore,
   useSearchStore,
-  KickModal,
 } from '@/features/main';
-import { useEffect, useState } from 'react';
-import { Sidebar } from '@/widgets/sidebar';
-import { useSound } from '@/entities/sound';
-import { SoundManager } from '@/shared/api/sound/manager';
 import { SOUND_ASSETS } from '@/shared/api/sound/assets';
+import { SoundManager } from '@/shared/api/sound/manager';
+import { Sidebar } from '@/widgets/sidebar';
 
 const MainPage = () => {
   const navigate = useNavigate();
@@ -44,11 +44,6 @@ const MainPage = () => {
       window.history.replaceState({}, document.title);
     }
   }, [location]);
-
-  if (!user) {
-    navigate('/login');
-    return null;
-  }
 
   const handleLogout = () => {
     playClick();

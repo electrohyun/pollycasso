@@ -1,8 +1,9 @@
 import { useState } from 'react';
+
 import type { Product } from '@/entities/product';
 import { useSound } from '@/entities/sound';
-import { SoundManager } from '@/shared/api/sound/manager';
 import { SOUND_ASSETS } from '@/shared/api/sound/assets';
+import { SoundManager } from '@/shared/api/sound/manager';
 import { SHOP_CATEGORIES } from '../constants/shop.constants';
 
 export interface CartItem extends Product {

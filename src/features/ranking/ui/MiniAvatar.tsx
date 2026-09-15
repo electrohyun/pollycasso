@@ -1,6 +1,6 @@
-import { getOutfitItemUrl } from '@/shared/lib/assets';
-import { LAYER_ORDER, SHOP_CATEGORIES } from '@/shared/constants/outfit';
 import type { ShopCategory } from '@/shared/constants/outfit';
+import { LAYER_ORDER, SHOP_CATEGORIES } from '@/shared/constants/outfit';
+import { getOutfitItemUrl } from '@/shared/lib/assets';
 
 interface MiniAvatarProps {
   outfit: Record<string, string>;

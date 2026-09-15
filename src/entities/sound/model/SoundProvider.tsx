@@ -1,7 +1,8 @@
-import { createContext, useContext, useEffect, useMemo } from 'react';
 import type { FC, ReactNode } from 'react';
-import { SoundManager } from '@/shared/api/sound/manager';
+import { createContext, useContext, useEffect, useMemo } from 'react';
+
 import { SOUND_ASSETS } from '@/shared/api/sound/assets';
+import { SoundManager } from '@/shared/api/sound/manager';
 import { useSoundStore } from './useSoundStore';
 
 interface SoundContextType {

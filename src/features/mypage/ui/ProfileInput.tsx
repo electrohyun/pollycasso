@@ -1,9 +1,9 @@
-import { useState } from 'react';
 import type { ComponentProps } from 'react';
+import { useState } from 'react';
 import {
+  CheckCircleIcon,
   EyeIcon,
   EyeSlashIcon,
-  CheckCircleIcon,
   XCircleIcon,
 } from '@heroicons/react/24/outline';
 

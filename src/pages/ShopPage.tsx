@@ -1,7 +1,7 @@
-import { ShopSidebar, ShopProductList, ShopProfilePanel } from '@/widgets/shop';
 import { useNudgeListener } from '@/features/lobby';
 import { useShop } from '@/features/shop';
 import { BackButton } from '@/shared/ui/BackButton';
+import { ShopProductList, ShopProfilePanel,ShopSidebar } from '@/widgets/shop';
 
 const ShopPage = () => {
   useNudgeListener();

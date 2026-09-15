@@ -1,7 +1,8 @@
 import { useMemo } from 'react';
-import type { CategoryType, SortType } from '../model/types';
-import { SHOP_CATEGORIES } from '../constants/shop.constants';
+
 import type { Product } from '@/entities/product';
+import { SHOP_CATEGORIES } from '../constants/shop.constants';
+import type { CategoryType, SortType } from '../model/types';
 
 export const useProductSorting = (
   activeCategory: CategoryType,

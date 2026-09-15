@@ -11,16 +11,16 @@ import {
 } from '@/features/game';
 import { DrawingPhase } from '@/features/game-drawing';
 import { EvaluatingPhase } from '@/features/game-evaluating';
-import { RoundSummaryPhase } from '@/features/game-round-summary';
 import { FinishedPhase } from '@/features/game-finished';
-import { PHASE_TIME } from '@/shared/model';
+import { RoundSummaryPhase } from '@/features/game-round-summary';
+import { SOCKET_EVENTS } from '@/shared/api/socket';
+import { useGameSocket } from '@/shared/api/socket/GameSocketProvider';
 import type { PhaseContext, RoomStatus } from '@/shared/model';
+import { PHASE_TIME } from '@/shared/model';
 import { useGameState } from '../model/useGameState';
 import { useGameSubmission } from '../model/useGameSubmission';
 import { useThemeInput } from '../model/useThemeInput';
 import { useThemeSelecting } from '../model/useThemeSelecting';
-import { useGameSocket } from '@/shared/api/socket/GameSocketProvider';
-import { SOCKET_EVENTS } from '@/shared/api/socket';
 
 interface GameWidgetProps {
   phase: RoomStatus;

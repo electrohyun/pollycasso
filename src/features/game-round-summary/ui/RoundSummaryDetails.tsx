@@ -1,8 +1,9 @@
 import {
-  StarIcon,
   ArrowsRightLeftIcon,
   PencilIcon,
+  StarIcon,
 } from '@heroicons/react/24/solid';
+
 import type { DrawData } from '@/entities/drawing';
 import { useDrawAnalysis } from '../model/useDrawAnalysis';
 import { DetailSection } from './DetailSection';

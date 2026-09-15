@@ -1,18 +1,19 @@
-import { useState, useMemo } from 'react';
+import { useMemo,useState } from 'react';
 import { useSearchParams } from 'react-router';
+
 import { Header } from '@/assets';
-import {
-  AdminSidebar,
-  GenericTable,
-  ReportDetail,
-  MatchDetail,
-} from '@/features/admin';
 import type {
   Match,
   Report,
-  TabType,
   TableConfig,
+  TabType,
   User,
+} from '@/features/admin';
+import {
+  AdminSidebar,
+  GenericTable,
+  MatchDetail,
+  ReportDetail,
 } from '@/features/admin';
 import {
   INITIAL_MATCHES,

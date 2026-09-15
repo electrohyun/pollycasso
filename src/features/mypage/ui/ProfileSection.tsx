@@ -1,17 +1,18 @@
-import { ProfileInput } from './ProfileInput';
-import type { User } from '@/entities/user';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { profileUpdateSchema, type ProfileFormValues } from '../model/schema';
-import { Spinner } from '@/shared/ui/Spinner';
-import type { ApiFailureResponse } from '@/shared/api';
 import { isAxiosError } from 'axios';
-import { useSound } from '@/entities/sound';
-import { SoundManager } from '@/shared/api/sound/manager';
-import { SOUND_ASSETS } from '@/shared/api/sound/assets';
 import { overlay } from 'overlay-kit';
-import { CreditsModal } from './CreditsModal';
+
+import { useSound } from '@/entities/sound';
+import type { User } from '@/entities/user';
 import { CreatorsModal } from '@/features/mypage/ui/CreatorsModal';
+import type { ApiFailureResponse } from '@/shared/api';
+import { SOUND_ASSETS } from '@/shared/api/sound/assets';
+import { SoundManager } from '@/shared/api/sound/manager';
+import { Spinner } from '@/shared/ui/Spinner';
+import { type ProfileFormValues,profileUpdateSchema } from '../model/schema';
+import { CreditsModal } from './CreditsModal';
+import { ProfileInput } from './ProfileInput';
 
 interface ProfileSectionProps {
   user: User;

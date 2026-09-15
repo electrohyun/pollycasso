@@ -1,5 +1,6 @@
-import { create } from 'zustand';
 import { Socket } from 'socket.io-client';
+import { create } from 'zustand';
+
 import type { FriendProfile } from './types';
 
 interface FriendStore {

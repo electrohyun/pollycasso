@@ -1,5 +1,6 @@
-import { NotFoundImage } from '@/assets';
 import { Link } from 'react-router';
+
+import { NotFoundImage } from '@/assets';
 
 const NotFoundPage = () => {
   return (

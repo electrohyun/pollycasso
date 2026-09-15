@@ -1,6 +1,6 @@
-import { ReceiptItemCarousel } from './ReceiptItemCarousel';
 import type { Product } from '@/entities/product';
 import type { PurchaseStatus } from '../model/types';
+import { ReceiptItemCarousel } from './ReceiptItemCarousel';
 
 interface PurchaseStatusContentProps {
   status: PurchaseStatus;

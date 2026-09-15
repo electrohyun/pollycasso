@@ -2,9 +2,9 @@ import { useEffect, useMemo, useState } from 'react';
 
 import { useAuthStore } from '@/entities/user';
 import { MOCK_GAME_SELECTING } from '@/mocks/game.mock';
-import type { DrawingContext, Player, RoomState } from '@/shared/model';
-import { useGameSocket } from '@/shared/api/socket/GameSocketProvider';
 import { SOCKET_EVENTS } from '@/shared/api/socket';
+import { useGameSocket } from '@/shared/api/socket/GameSocketProvider';
+import type { DrawingContext, Player, RoomState } from '@/shared/model';
 
 export const useGameState = () => {
   const user = useAuthStore((state) => state.user);

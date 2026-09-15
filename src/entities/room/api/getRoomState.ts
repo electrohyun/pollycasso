@@ -1,6 +1,6 @@
 import { instance } from '@/shared/api';
-import type { RoomStatus } from '../model/types';
 import type { Outfit, RoomSettings, WaitingStatus } from '@/shared/model';
+import type { RoomStatus } from '../model/types';
 
 interface GetRoomsStateResponse {
   status: RoomStatus;

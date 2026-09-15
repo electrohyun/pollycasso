@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useRef, useState } from 'react';
 import { useNavigate } from 'react-router';
 
 /**
@@ -12,7 +12,7 @@ export const useAdminKnock = (
 ) => {
   const navigate = useNavigate();
   const [clickCount, setClickCount] = useState(0);
-  const timerRef = useRef<NodeJS.Timeout | null>(null);
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const handleKnock = () => {
     if (timerRef.current) {
