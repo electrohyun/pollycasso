@@ -41,7 +41,7 @@ export const useFriend = (searchKeyword: string = '') => {
 
   const handleFriendAction = useCallback(
     (
-      targetUserId: number,
+      targetUserId: number | string,
       action: 'ACCEPT' | 'BLOCK' | 'DELETE' | 'CANCEL' | 'REJECT' | 'UNBLOCK',
     ) => {
       if (!socket) return;

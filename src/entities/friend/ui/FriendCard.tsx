@@ -17,17 +17,16 @@ import type {
 } from '../model/types';
 
 interface FriendCardProps extends FriendProfile {
-  relation: FriendRelation;
+  relation?: FriendRelation;
   onAction: (action: FriendAction) => void;
 }
 
 export const FriendCard = ({
-  userId,
   nickname,
   outfit,
   level,
   tag,
-  relation,
+  relation = 'FRIEND',
   isOnline,
   onAction,
 }: FriendCardProps) => {

@@ -23,13 +23,13 @@ interface CharacterPreviewProps {
   };
 }
 
-const LAYER_ORDER = [
+const LAYER_ORDER: Product['subCategory'][] = [
   SHOP_CATEGORIES.BIRD,
   SHOP_CATEGORIES.HAT,
   SHOP_CATEGORIES.SHOES,
   SHOP_CATEGORIES.BOTTOM,
   SHOP_CATEGORIES.TOP,
-  SHOP_CATEGORIES.ACCESSORY,
+  SHOP_CATEGORIES.ACC,
   SHOP_CATEGORIES.EFFECT,
 ];
 
@@ -49,7 +49,11 @@ export const CharacterPreview = ({
 
   const wearables = useMemo(() => {
     return previewItems
-      .filter((item) => item.subCategory !== SHOP_CATEGORIES.BIRD)
+      .filter(
+        (item) =>
+          item.subCategory !== SHOP_CATEGORIES.BIRD &&
+          item.subCategory !== SHOP_CATEGORIES.ITEM,
+      )
       .sort((a, b) => {
         const indexA = LAYER_ORDER.indexOf(a.subCategory!);
         const indexB = LAYER_ORDER.indexOf(b.subCategory!);
