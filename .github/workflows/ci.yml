@@ -1,0 +1,99 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types:
+      - opened
+      - edited
+      - reopened
+      - synchronize
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    name: Lint and build
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v6
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Lint
+        run: pnpm lint
+
+      - name: Build
+        run: pnpm build
+
+  label-pull-request:
+    name: Apply pull request label
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+      issues: write
+      pull-requests: write
+
+    steps:
+      - name: Match title prefix to label
+        uses: actions/github-script@v9
+        with:
+          script: |
+            const labelByPrefix = {
+              feat: '✨ feature',
+              fix: '🐞 bug',
+              publish: '🎨 publish',
+              refactor: '🔨 refactor',
+              docs: '📘 docs',
+              chore: '🏠 chore',
+            };
+
+            const managedLabels = new Set(Object.values(labelByPrefix));
+            const title = context.payload.pull_request.title;
+            const prefix = title.match(/^([a-z]+):/i)?.[1].toLowerCase();
+            const targetLabel = labelByPrefix[prefix];
+            const currentLabels = context.payload.pull_request.labels.map(
+              (label) => label.name,
+            );
+
+            for (const label of currentLabels) {
+              if (managedLabels.has(label) && label !== targetLabel) {
+                await github.rest.issues.removeLabel({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: context.issue.number,
+                  name: label,
+                });
+              }
+            }
+
+            if (targetLabel && !currentLabels.includes(targetLabel)) {
+              await github.rest.issues.addLabels({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                labels: [targetLabel],
+              });
+            }
