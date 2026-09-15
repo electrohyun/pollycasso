@@ -1,6 +1,6 @@
-import { io, Socket } from 'socket.io-client';
-
 import { useAuthStore } from '@/entities/user';
+import type { Socket } from './io';
+import { io } from './io';
 
 let chatSocket: Socket | null = null;
 

@@ -8,9 +8,9 @@ import {
   handleFriendSearch,
 } from '@/mocks/friend.mock';
 import { MOCK_GAME_SELECTING } from '@/mocks/game.mock';
-import { SOCKET_EVENTS } from '@/shared/api/socket';
 import type { RoomState } from '@/shared/model';
 import { PHASE_TIME } from '@/shared/model';
+import { SOCKET_EVENTS } from './constants';
 import {
   handleChatSendMessage,
   handleGameThemeAutoSelect,

@@ -21,7 +21,7 @@ export const mockFriends: Friend[] = [
 ] as const;
 
 export const chatHandlers = [
-  http.get('mock/friends', ({ request }) => {
+  http.get('/mock/friends', ({ request }) => {
     const url = new URL(request.url);
     const error = url.searchParams.get('error');
 
@@ -35,7 +35,7 @@ export const chatHandlers = [
     return HttpResponse.json(mockFriends, { status: 200 });
   }),
 
-  http.get('mock/channels', () => {
+  http.get('/mock/channels', () => {
     return HttpResponse.json(mockChannels, { status: 200 });
   }),
 ];

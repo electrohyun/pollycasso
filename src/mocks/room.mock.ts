@@ -76,7 +76,7 @@ export const mockRooms: Room[] = [
 let roomsDB = [...mockRooms];
 
 export const roomHandlers = [
-  http.get('mock/rooms', ({ request }) => {
+  http.get('/mock/rooms', ({ request }) => {
     const url = new URL(request.url);
     const cursor = Number(url.searchParams.get('cursor')) || null;
 
@@ -134,7 +134,7 @@ export const roomHandlers = [
     });
   }),
 
-  http.post('rooms', async ({ request }) => {
+  http.post('/mock/rooms', async ({ request }) => {
     const body = (await request.json()) as CreateRoomPayload;
 
     if (body.name === 'errorroom') {
