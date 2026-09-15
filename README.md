@@ -1,5 +1,9 @@
 # Pollycasso
 
+<div align="center">
+  <img width="1920" height="640" alt="Pollycasso" src="https://github.com/user-attachments/assets/36710129-6608-4cec-b96f-754ae3292e7d" />
+</div>
+
 > 🚧 This project is currently under construction.
 
 Pollycasso is a real-time drawing battle game for 3–6 players in a shared room.
@@ -7,11 +11,13 @@ Each player joins a room, draws an outfit on a canvas based on the selected
 theme, and then rates other entries while receiving ratings on their own. The
 player or team with the highest score wins.
 
-Originally developed as the 10th project by
-[Modern Agile](https://github.com/modern-agile-team), Pollycasso is being adapted
-into a frontend-only preview demo with
-[Smocket](https://github.com/electrohyun/smocket), a Socket.IO mocking library,
-as of September 2026.
+Pollycasso was originally developed as the 10th project by
+[Modern Agile](https://github.com/modern-agile-team). This repository provides a
+frontend preview powered by [Smocket](https://github.com/electrohyun/smocket), a
+Socket.IO mocking library.
+
+Previous issues, pull requests, and code reviews are available in the
+[original repository](https://github.com/modern-agile-team/10term-pollycasso-front).
 
 ## Development goals
 
@@ -54,8 +60,3 @@ pnpm dev
 | `pnpm lint` | Run ESLint |
 | `pnpm storybook` | Start Storybook |
 | `pnpm build-storybook` | Build Storybook |
-
-## Previous development records
-
-- [Issues](https://github.com/modern-agile-team/10term-pollycasso-front/issues)
-- [Pull requests and code reviews](https://github.com/modern-agile-team/10term-pollycasso-front/pulls)
