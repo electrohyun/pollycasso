@@ -1,8 +1,8 @@
 ---
 name: 버그 이슈
 about: '🐞 발생한 버그에 대해 간결하게 설명해주세요.'
-title: '버그 제보'
-labels: bug
+title: '[Bug] '
+labels: '🐞 bug'
 assignees: electrohyun
 ---
 

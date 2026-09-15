@@ -13,7 +13,7 @@ Pollycasso는 3~6명의 플레이어가 한 방에서 진행하는 실시간 드
 
 Pollycasso는 [Modern Agile](https://github.com/modern-agile-team)의 10번째
 프로젝트로 진행되었습니다. 이 저장소는 Socket.IO 모킹 라이브러리인
-[Smocket](https://github.com/electrohyun/smocket)을 활용한 프론트엔드 프리뷰를
+[smocket](https://github.com/electrohyun/smocket)을 활용한 프론트엔드 프리뷰를
 제공합니다.
 
 이전 이슈와 Pull Request, 코드 리뷰는
