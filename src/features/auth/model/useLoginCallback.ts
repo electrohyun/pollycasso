@@ -48,5 +48,5 @@ export const useLoginCallback = () => {
     };
 
     processLogin();
-  }, [navigate, setAuth, refreshMutate]);
+  }, [navigate, queryClient, refreshMutate, setAuth, updateUser]);
 };

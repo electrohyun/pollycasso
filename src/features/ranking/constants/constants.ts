@@ -1,4 +1,4 @@
-import type { PeriodId,RankingCriteria } from '@/features/ranking/model/types';
+import type { PeriodId, RankingCriteria } from '@/features/ranking/model/types';
 
 export const PERIODS: readonly {
   id: PeriodId;

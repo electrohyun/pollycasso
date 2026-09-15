@@ -1,21 +1,10 @@
 import type { FC, ReactNode } from 'react';
-import { createContext, useContext, useEffect, useMemo } from 'react';
+import { useEffect, useMemo } from 'react';
 
 import { SOUND_ASSETS } from '@/shared/api/sound/assets';
 import { SoundManager } from '@/shared/api/sound/manager';
+import { SoundContext } from './soundContext';
 import { useSoundStore } from './useSoundStore';
-
-interface SoundContextType {
-  bgmVolume: number;
-  sfxVolume: number;
-  isMuted: boolean;
-  setBgmVolume: (v: number) => void;
-  setSfxVolume: (v: number) => void;
-  toggleMute: () => void;
-  unmute: () => void;
-}
-
-const SoundContext = createContext<SoundContextType | undefined>(undefined);
 
 export const SoundProvider: FC<{ children: ReactNode }> = ({ children }) => {
   const {
@@ -70,10 +59,4 @@ export const SoundProvider: FC<{ children: ReactNode }> = ({ children }) => {
   return (
     <SoundContext.Provider value={value}>{children}</SoundContext.Provider>
   );
-};
-
-export const useSound = () => {
-  const context = useContext(SoundContext);
-  if (!context) throw new Error('useSound must be used within SoundProvider');
-  return context;
 };

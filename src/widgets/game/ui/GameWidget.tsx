@@ -14,7 +14,7 @@ import { EvaluatingPhase } from '@/features/game-evaluating';
 import { FinishedPhase } from '@/features/game-finished';
 import { RoundSummaryPhase } from '@/features/game-round-summary';
 import { SOCKET_EVENTS } from '@/shared/api/socket';
-import { useGameSocket } from '@/shared/api/socket/GameSocketProvider';
+import { useGameSocket } from '@/shared/api/socket/gameSocketContext';
 import type { PhaseContext, RoomStatus } from '@/shared/model';
 import { PHASE_TIME } from '@/shared/model';
 import { useGameState } from '../model/useGameState';

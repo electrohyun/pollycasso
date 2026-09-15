@@ -1,18 +1,9 @@
 import type { ReactNode } from 'react';
-import { createContext, useContext, useEffect, useState } from 'react';
-import type { Socket } from 'socket.io-client';
+import { useEffect, useState } from 'react';
 
 import { useAuthStore } from '@/entities/user';
+import { FriendSocketContext } from './friendSocketContext';
 import { getFriendSocket } from './friendSocketInstance';
-
-interface FriendSocketContextProps {
-  friendSocket: Socket | null;
-  isFriendConnected: boolean;
-}
-
-const FriendSocketContext = createContext<FriendSocketContextProps | null>(
-  null,
-);
 
 export const FriendSocketProvider = ({ children }: { children: ReactNode }) => {
   const friendSocket = getFriendSocket();
@@ -49,9 +40,4 @@ export const FriendSocketProvider = ({ children }: { children: ReactNode }) => {
       {children}
     </FriendSocketContext.Provider>
   );
-};
-
-export const useFriendSocket = () => {
-  const context = useContext(FriendSocketContext);
-  return context || { friendSocket: null, isFriendConnected: false };
 };

@@ -1,5 +1,5 @@
 import type { CategoryType, SortType } from '@/features/shop';
-import { SHOP_CATEGORY_LIST,SORT_OPTIONS_LIST } from '@/features/shop';
+import { SHOP_CATEGORY_LIST, SORT_OPTIONS_LIST } from '@/features/shop';
 import { cn } from '@/shared/lib';
 
 interface ShopSidebarProps {

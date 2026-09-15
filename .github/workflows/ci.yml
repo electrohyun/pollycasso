@@ -9,6 +9,7 @@ on:
       - opened
       - edited
       - reopened
+      - ready_for_review
       - synchronize
 
 concurrency:
@@ -20,7 +21,8 @@ permissions:
 
 jobs:
   quality:
-    name: Lint and build
+    name: Quality checks
+    if: github.event_name == 'push' || github.event.action != 'edited'
     runs-on: ubuntu-latest
     timeout-minutes: 15
 
@@ -42,6 +44,15 @@ jobs:
 
       - name: Lint
         run: pnpm lint
+
+      - name: Check formatting
+        run: pnpm format:check
+
+      - name: Install Chromium
+        run: pnpm exec playwright install --with-deps chromium
+
+      - name: Test
+        run: pnpm test
 
       - name: Build
         run: pnpm build

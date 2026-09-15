@@ -1,18 +1,9 @@
 import type { ReactNode } from 'react';
-import { createContext, useContext, useEffect, useState } from 'react';
-import type { Socket } from 'socket.io-client';
+import { useEffect, useState } from 'react';
 
 import { useAuthStore } from '@/entities/user';
+import { WaitingSocketContext } from './waitingSocketContext';
 import { getWaitingSocket } from './waitingSocketInstance';
-
-interface WaitingSocketContextProps {
-  waitingSocket: Socket | null;
-  isGameConnected: boolean;
-}
-
-const WaitingSocketContext = createContext<WaitingSocketContextProps | null>(
-  null,
-);
 
 export const WaitingSocketProvider = ({
   children,
@@ -21,7 +12,7 @@ export const WaitingSocketProvider = ({
 }) => {
   const waitingSocket = getWaitingSocket();
 
-  const [isGameConnected, setIsGameConnected] = useState(
+  const [isWaitingConnected, setIsWaitingConnected] = useState(
     waitingSocket.connected,
   );
 
@@ -33,8 +24,8 @@ export const WaitingSocketProvider = ({
 
     waitingSocket.auth = { token };
 
-    const handleConnect = () => setIsGameConnected(true);
-    const handleDisconnect = () => setIsGameConnected(false);
+    const handleConnect = () => setIsWaitingConnected(true);
+    const handleDisconnect = () => setIsWaitingConnected(false);
 
     waitingSocket.on('connect', handleConnect);
     waitingSocket.on('disconnect', handleDisconnect);
@@ -50,13 +41,10 @@ export const WaitingSocketProvider = ({
   }, [token, waitingSocket]);
 
   return (
-    <WaitingSocketContext.Provider value={{ waitingSocket, isGameConnected }}>
+    <WaitingSocketContext.Provider
+      value={{ waitingSocket, isWaitingConnected }}
+    >
       {children}
     </WaitingSocketContext.Provider>
   );
-};
-
-export const useWaitingSocket = () => {
-  const context = useContext(WaitingSocketContext);
-  return context || { waitingSocket: null, isGameConnected: false };
 };

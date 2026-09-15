@@ -40,5 +40,5 @@ export const useNudgeListener = () => {
     return () => {
       waitingSocket.off('room:nudged', handleNudge);
     };
-  }, [waitingSocket, roomId, navigate]);
+  }, [waitingSocket, roomId, navigate, isMuted, sfxVolume]);
 };

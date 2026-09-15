@@ -86,6 +86,12 @@ mock을 적용합니다. 현재 HTTP mock은 인증, 방 목록과 생성, 채�
 | `pnpm dev`             | Vite 개발 서버 실행                        |
 | `pnpm dev:mock`        | HTTP와 Socket.IO mock을 적용한 프리뷰 실행 |
 | `pnpm build`           | 타입 검사 후 애플리케이션 빌드             |
+| `pnpm typecheck`       | TypeScript 프로젝트 검사                   |
 | `pnpm lint`            | ESLint 실행                                |
+| `pnpm lint:fix`        | 자동 수정 가능한 ESLint 문제 수정          |
+| `pnpm test`            | Storybook 브라우저 테스트 실행             |
+| `pnpm test:watch`      | 테스트 감시 모드 실행                      |
+| `pnpm format`          | Prettier로 파일 서식 수정                  |
+| `pnpm format:check`    | Prettier 서식 검사                         |
 | `pnpm storybook`       | Storybook 개발 서버 실행                   |
 | `pnpm build-storybook` | Storybook 빌드                             |

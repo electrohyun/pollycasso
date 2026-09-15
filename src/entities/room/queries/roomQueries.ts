@@ -27,7 +27,7 @@ export const roomQueries = {
                 ...room,
                 currentPlayers: detail.players.length, // 기존 데이터에 인원 추가
               };
-            } catch (error) {
+            } catch {
               return { ...room, currentPlayers: 0 };
             }
           }),

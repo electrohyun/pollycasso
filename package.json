@@ -12,11 +12,15 @@
   "scripts": {
     "dev": "vite",
     "dev:mock": "vite --mode mock",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "fix": "eslint . --fix",
+    "build": "pnpm typecheck && vite build",
+    "typecheck": "tsc -b",
+    "lint": "eslint . --max-warnings 0",
+    "lint:fix": "eslint . --fix",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "preview": "vite preview",
     "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "chromatic": "npx chromatic"

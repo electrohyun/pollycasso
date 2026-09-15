@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 
 import { SOCKET_EVENTS } from '@/shared/api/socket';
-import { useGameSocket } from '@/shared/api/socket/GameSocketProvider';
+import { useGameSocket } from '@/shared/api/socket/gameSocketContext';
 import { RANDOM_THEMES } from '@/shared/model';
 
 export const useThemeInput = (isMyTurn: boolean) => {

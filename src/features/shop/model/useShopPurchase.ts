@@ -1,4 +1,4 @@
-import { useMemo,useState } from 'react';
+import { useMemo, useState } from 'react';
 
 import type { Product } from '@/entities/product';
 import { useSound } from '@/entities/sound';

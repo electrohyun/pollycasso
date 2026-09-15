@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 
 import { useAuthStore } from '@/entities/user';
-import { useWelcomeLogic,welcomeVariants } from '@/features/welcome';
+import { useWelcomeLogic, welcomeVariants } from '@/features/welcome';
 import { getOutfitItemUrl } from '@/shared/lib/assets';
 import { OUTFIT_LAYERS } from '@/shared/lib/cdn';
 

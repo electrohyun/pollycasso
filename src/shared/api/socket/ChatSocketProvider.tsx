@@ -1,16 +1,9 @@
 import type { ReactNode } from 'react';
-import { createContext, useContext, useEffect, useState } from 'react';
-import type { Socket } from 'socket.io-client';
+import { useEffect, useState } from 'react';
 
 import { useAuthStore } from '@/entities/user';
+import { ChatSocketContext } from './chatSocketContext';
 import { getChatSocket } from './chatSocketInstance';
-
-interface ChatSocketContextProps {
-  chatSocket: Socket | null;
-  isChatConnected: boolean;
-}
-
-const ChatSocketContext = createContext<ChatSocketContextProps | null>(null);
 
 export const ChatSocketProvider = ({ children }: { children: ReactNode }) => {
   const chatSocket = getChatSocket();
@@ -43,9 +36,4 @@ export const ChatSocketProvider = ({ children }: { children: ReactNode }) => {
       {children}
     </ChatSocketContext.Provider>
   );
-};
-
-export const useChatSocket = () => {
-  const context = useContext(ChatSocketContext);
-  return context || { chatSocket: null, isChatConnected: false };
 };
