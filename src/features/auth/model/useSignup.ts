@@ -29,6 +29,8 @@ export const useSignup = () => {
 
   const {
     handleSubmit,
+    setError,
+    trigger,
     formState: { isValid },
   } = methods;
 
@@ -37,9 +39,9 @@ export const useSignup = () => {
 
   useEffect(() => {
     if (touchedFields.confirmPassword) {
-      methods.trigger('confirmPassword');
+      trigger('confirmPassword');
     }
-  }, [password, touchedFields.confirmPassword]);
+  }, [password, touchedFields.confirmPassword, trigger]);
 
   const { mutate: signup, isPending: isSigningUp } = useMutation({
     ...authQueries.signup(),
@@ -71,7 +73,7 @@ export const useSignup = () => {
 
         setErrorMessage(null);
         navigate('/welcome');
-      } catch (err: unknown) {
+      } catch {
         alert('회원가입에 성공했어요! 로그인 페이지로 이동합니다.');
         navigate('/login');
       }
@@ -90,7 +92,7 @@ export const useSignup = () => {
             }
 
             if (clientMessage) {
-              methods.setError(e.field as any, {
+              setError(e.field as 'username' | 'nickname', {
                 type: 'manual',
                 message: clientMessage,
               });
@@ -105,8 +107,11 @@ export const useSignup = () => {
   });
 
   const onSubmit = (formValues: SignupFormValues) => {
-    const { confirmPassword, ...payload } = formValues;
-    signup(payload);
+    signup({
+      username: formValues.username,
+      nickname: formValues.nickname,
+      password: formValues.password,
+    });
   };
 
   return {

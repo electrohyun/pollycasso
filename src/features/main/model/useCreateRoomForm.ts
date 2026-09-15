@@ -27,13 +27,14 @@ export const useCreateRoomForm = () => {
       password: '',
     },
   });
+  const { setValue } = form;
 
   useEffect(() => {
     const randomTitle =
       TITLE_PRESETS[Math.floor(Math.random() * TITLE_PRESETS.length)];
     setRoomTitle(randomTitle);
-    form.setValue('name', randomTitle);
-  }, []);
+    setValue('name', randomTitle);
+  }, [setValue]);
 
   const allowedPlayers = gameMode === 'TEAM' ? [4, 6] : [3, 4, 5, 6];
   const isMin = maxPlayers === allowedPlayers[0];
@@ -41,10 +42,10 @@ export const useCreateRoomForm = () => {
 
   const selectGameMode = (mode: GameMode) => {
     setGameMode(mode);
-    form.setValue('mode', mode.toUpperCase() as GameMode);
+    setValue('mode', mode.toUpperCase() as GameMode);
     const newPlayers = mode === 'TEAM' ? 4 : 3;
     setMaxPlayers(newPlayers);
-    form.setValue('maxPlayers', newPlayers);
+    setValue('maxPlayers', newPlayers);
   };
 
   const increase = () => {
@@ -52,7 +53,7 @@ export const useCreateRoomForm = () => {
     if (idx < allowedPlayers.length - 1) {
       const v = allowedPlayers[idx + 1];
       setMaxPlayers(v);
-      form.setValue('maxPlayers', v);
+      setValue('maxPlayers', v);
     }
   };
 
@@ -61,16 +62,16 @@ export const useCreateRoomForm = () => {
     if (idx > 0) {
       const v = allowedPlayers[idx - 1];
       setMaxPlayers(v);
-      form.setValue('maxPlayers', v);
+      setValue('maxPlayers', v);
     }
   };
 
   const selectVisibility = (v: 'public' | 'private') => {
     setVisibility(v);
-    form.setValue('isPrivate', v === 'private');
+    setValue('isPrivate', v === 'private');
     if (v === 'public') {
       setPassword('');
-      form.setValue('password', '');
+      setValue('password', '');
     }
   };
 

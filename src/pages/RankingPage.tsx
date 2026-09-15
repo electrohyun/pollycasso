@@ -1,4 +1,4 @@
-import { useEffect,useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 
 import { RankingBoard } from '@/assets';
 import type { PeriodId, RankingCriteria } from '@/features/ranking';

@@ -1,4 +1,4 @@
-import type { TargetAndTransition,Variants } from 'framer-motion';
+import type { TargetAndTransition, Variants } from 'framer-motion';
 
 export const welcomeVariants: Record<'classic' | 'spiral' | 'prism', Variants> =
   {

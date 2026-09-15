@@ -181,7 +181,15 @@ export const useRoom = () => {
       waitingSocket.off('room:updateGameState', handleUpdateGameState);
       waitingSocket.off('connect', handleConnect);
     };
-  }, [waitingSocket, roomId, joinRoom, initialPassword, navigate]);
+  }, [
+    waitingSocket,
+    roomId,
+    joinRoom,
+    initialPassword,
+    navigate,
+    isMuted,
+    sfxVolume,
+  ]);
 
   const me = selectMe(roomState, myUserId ?? '');
   const isSolo = roomState?.settings?.gameMode === 'SOLO';

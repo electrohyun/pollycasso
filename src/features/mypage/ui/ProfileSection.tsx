@@ -10,7 +10,7 @@ import type { ApiFailureResponse } from '@/shared/api';
 import { SOUND_ASSETS } from '@/shared/api/sound/assets';
 import { SoundManager } from '@/shared/api/sound/manager';
 import { Spinner } from '@/shared/ui/Spinner';
-import { type ProfileFormValues,profileUpdateSchema } from '../model/schema';
+import { type ProfileFormValues, profileUpdateSchema } from '../model/schema';
 import { CreditsModal } from './CreditsModal';
 import { ProfileInput } from './ProfileInput';
 

@@ -4,7 +4,7 @@ import { CharacterPreview } from '@/entities/character';
 import { useNudgeListener } from '@/features/lobby/model/useNudgeListener';
 import { useShopPreview } from '@/features/shop';
 import { MOCK_PRODUCTS } from '@/mocks/shop.mock';
-import { useWaitingSocket } from '@/shared/api/socket/WaitingSocketProvider';
+import { useWaitingSocket } from '@/shared/api/socket/waitingSocketContext';
 import { cn } from '@/shared/lib';
 import { BackButton } from '@/shared/ui/BackButton';
 import { WardrobeProductList } from '@/widgets/wardrobe';

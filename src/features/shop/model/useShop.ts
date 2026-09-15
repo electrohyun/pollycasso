@@ -2,7 +2,7 @@ import { useEffect, useMemo } from 'react';
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 
 import { useAuthStore } from '@/entities/user/model/useAuthStore';
-import { useWaitingSocket } from '@/shared/api/socket/WaitingSocketProvider';
+import { useWaitingSocket } from '@/shared/api/socket/waitingSocketContext';
 import { SHOP_CATEGORIES } from '../constants/shop.constants';
 import { shopQueries } from '../queries/shopQueries';
 import type { CartItem } from './useCart';

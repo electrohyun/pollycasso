@@ -1,4 +1,4 @@
-import { useMemo,useState } from 'react';
+import { useMemo, useState } from 'react';
 
 import { MOCK_ROUND_SUMMARY } from '@/mocks/summary.mock';
 

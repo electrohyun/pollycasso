@@ -2,7 +2,7 @@
 
 > **TL;DR** Complete an interactive frontend preview. Mock HTTP with MSW,
 > reproduce Socket.IO behavior with smocket, and verify every change with the
-> build and lint commands.
+> repository quality commands.
 
 This file defines working rules for agents and developers in the Pollycasso
 repository. Start with [README.md](README.md) for the project overview and setup
@@ -89,7 +89,8 @@ instructions.
 
 ## Verification
 
-- Run `pnpm lint` and `pnpm build` before considering work complete.
+- Run `pnpm lint`, `pnpm format:check`, `pnpm test`, and `pnpm build` before
+  considering work complete.
 - When the UI changes, verify it in the relevant preview flow.
 - When mock behavior changes, run the affected user journey from the beginning
   in mock mode.

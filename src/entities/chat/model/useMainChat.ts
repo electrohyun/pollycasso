@@ -1,4 +1,4 @@
-import { type KeyboardEvent,useEffect, useRef, useState } from 'react';
+import { type KeyboardEvent, useEffect, useRef, useState } from 'react';
 
 import {
   CHANNEL_TYPES,
@@ -15,8 +15,8 @@ import type { FriendProfile } from '@/entities/friend';
 import { useFriendStore } from '@/entities/friend';
 import { useSound } from '@/entities/sound';
 import { useAuthStore } from '@/entities/user';
-import { useChatSocket } from '@/shared/api/socket/ChatSocketProvider';
-import { useFriendSocket } from '@/shared/api/socket/FriendSocketProvider';
+import { useChatSocket } from '@/shared/api/socket/chatSocketContext';
+import { useFriendSocket } from '@/shared/api/socket/friendSocketContext';
 import { SOUND_ASSETS } from '@/shared/api/sound/assets';
 import { SoundManager } from '@/shared/api/sound/manager';
 import type { ChatMessage, Friend } from '@/shared/model';

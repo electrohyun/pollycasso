@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 
 import { useSound } from '@/entities/sound';
 import { useAuthStore } from '@/entities/user';
-import { useWaitingSocket } from '@/shared/api/socket/WaitingSocketProvider';
+import { useWaitingSocket } from '@/shared/api/socket/waitingSocketContext';
 import { SOUND_ASSETS } from '@/shared/api/sound/assets';
 import { SoundManager } from '@/shared/api/sound/manager';
 import type { ChatMessage } from '@/shared/model';
@@ -39,7 +39,7 @@ export const useGameChat = () => {
       waitingSocket.off('room:message', handleNewMessage);
       waitingSocket.off('chat:systemMessage', handleSystemMessage);
     };
-  }, [waitingSocket]);
+  }, [waitingSocket, isMuted, sfxVolume]);
 
   useEffect(() => {
     messageListRef.current?.scrollTo({

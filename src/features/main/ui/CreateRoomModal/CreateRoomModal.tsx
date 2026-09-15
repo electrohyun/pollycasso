@@ -68,7 +68,7 @@ export const CreateRoomModal = () => {
         password: '',
       });
     }
-  }, [isOpen, mode, initialData, reset]);
+  }, [isOpen, isEdit, mode, initialData, reset]);
 
   const gameMode = watch('mode');
   const maxPlayers = watch('maxPlayers');
