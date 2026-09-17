@@ -1,6 +1,6 @@
 import type { Product } from '@/entities/product';
 import { ProductCard } from '@/entities/product';
-import { SHOP_CATEGORIES } from '@/features/shop';
+import { PRODUCT_CATEGORIES } from '@/shared/model';
 
 interface ShopProductListProps {
   products: Product[];
@@ -28,7 +28,7 @@ export const ShopProductList = ({
           ) : (
             products.map((item) => {
               const isOwned = (inventoryIds ?? []).includes(item.id);
-              const isConsumable = item.subCategory === SHOP_CATEGORIES.ITEM;
+              const isConsumable = item.subCategory === PRODUCT_CATEGORIES.ITEM;
 
               const isBuyDisabled = isOwned && !isConsumable;
 

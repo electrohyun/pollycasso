@@ -1,5 +1,5 @@
 import { cn } from '@/shared/lib';
-import { COLORS, UI_TEXT } from '../constants/game';
+import { COLORS, UI_TEXT } from '../model/game';
 
 interface GameSubmitButtonProps {
   onComplete?: () => void;

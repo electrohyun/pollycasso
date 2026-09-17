@@ -1,6 +1,5 @@
 import type { FriendProfile, FriendWithRelation } from '@/entities/friend';
-import { SOCKET_EVENTS } from '@/shared/api/socket';
-import type { MockSocket } from '@/shared/api/socket/mockSocket';
+import { type MockSocket, SOCKET_EVENTS } from '@/shared/api';
 import type { Outfit } from '@/shared/model';
 
 const MOCK_OUTFIT: Outfit = {

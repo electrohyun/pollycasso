@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router';
 
-import { useGameSocket } from '@/shared/api/socket/gameSocketContext';
-import { useWaitingSocket } from '@/shared/api/socket/waitingSocketContext';
+import { useGameSocket, useWaitingSocket } from '@/shared/api';
 import type { PhaseContext, RoomState, RoomStatus } from '@/shared/model';
 import { GameWidget } from '@/widgets/game';
 import { LoadingWidget } from '@/widgets/loading';

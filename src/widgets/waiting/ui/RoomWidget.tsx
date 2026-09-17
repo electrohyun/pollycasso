@@ -1,3 +1,4 @@
+import { GameChat } from '@/features/chat';
 import {
   RoomActionButtons,
   RoomDashboard,
@@ -6,11 +7,15 @@ import {
   TeamTab,
   useRoomUI,
 } from '@/features/lobby';
-import { CreateRoomModal } from '@/features/main';
+import {
+  CreateRoomModal,
+  useCreateRoomModalStore,
+} from '@/features/manage-room';
 
 const RoomWidget = () => {
+  const { open: openRoomSettingsModal } = useCreateRoomModalStore();
   const { roomState, me, derived, actions, topGradient, bottomGradient } =
-    useRoomUI();
+    useRoomUI((initialData) => openRoomSettingsModal('EDIT', initialData));
 
   return (
     <RoomEntryGuard
@@ -73,6 +78,7 @@ const RoomWidget = () => {
 
             <div className="flex flex-col justify-between w-[560px] p-5 rounded-3xl">
               <RoomDashboard
+                chat={<GameChat />}
                 onOpenSettings={
                   derived.amIHost ? actions.handleOpenSettings : undefined
                 }

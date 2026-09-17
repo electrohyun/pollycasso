@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import type { CategoryType } from '@/features/shop';
-import { SHOP_CATEGORIES } from '@/features/shop';
+import { PRODUCT_CATEGORIES } from '@/shared/model';
 
 export const useWardrobeFilter = () => {
   const [activeTab, setActiveTab] = useState<'ITEM' | 'SKILL'>('ITEM');
@@ -34,11 +34,11 @@ export const useWardrobeFilter = () => {
 
   const currentFilterLabel =
     activeTab === 'SKILL'
-      ? SHOP_CATEGORIES.ITEM
-      : SHOP_CATEGORIES[itemCategory];
+      ? PRODUCT_CATEGORIES.ITEM
+      : PRODUCT_CATEGORIES[itemCategory];
 
   const itemButtonLabel =
-    activeTab === 'ITEM' ? SHOP_CATEGORIES[itemCategory] : '아이템';
+    activeTab === 'ITEM' ? PRODUCT_CATEGORIES[itemCategory] : '아이템';
 
   return {
     activeTab,

@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 
 import { useAuthStore } from '@/entities/user';
-import { useSocket } from '@/shared/api/socket';
+import { useSocket } from '@/shared/api';
 
 const ITEM_EFFECTS: Record<string, () => void> = {
   ink_splash: () => {

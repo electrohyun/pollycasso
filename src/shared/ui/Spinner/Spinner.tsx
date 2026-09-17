@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 
 import { Spinner as SpinnerIcon } from '@/assets';
-import { cn } from '@/shared/lib';
+import { cn } from '../../lib';
 import type { SpinnerStyleProps } from './Spinner.utils';
 import { getSpinnerStyles } from './Spinner.utils';
 

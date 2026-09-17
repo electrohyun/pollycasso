@@ -2,7 +2,7 @@ import { useCallback, useMemo } from 'react';
 import { Shape } from 'react-konva';
 import type { Context } from 'konva/lib/Context';
 
-import { createTintedBrush, getDistance } from '../utils/brushUtils';
+import { createTintedBrush, getDistance } from '../lib/brushUtils';
 
 interface TextureBrushLineProps {
   points: number[];

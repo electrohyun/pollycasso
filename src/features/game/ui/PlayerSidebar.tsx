@@ -2,10 +2,10 @@ import type { DragEvent } from 'react';
 import { useState } from 'react';
 
 import { PlayerAvatar } from '@/entities/game';
-import { useSocket } from '@/shared/api/socket';
+import { useSocket } from '@/shared/api';
 import { cn } from '@/shared/lib';
 import type { Player } from '@/shared/model';
-import { COLORS } from '../constants/game';
+import { COLORS } from '../model/game';
 
 interface PlayerSidebarProps {
   players: Player[];

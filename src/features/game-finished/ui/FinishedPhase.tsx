@@ -2,7 +2,7 @@ import { createPortal } from 'react-dom';
 
 import { MOCK_TEAM_FINISHED_ROOM_STATE } from '@/mocks/finished.mock';
 import type { FinishContext } from '@/shared/model';
-import { useLockBodyScroll } from '@/shared/model/useLockBodyScroll';
+import { useLockBodyScroll } from '@/shared/model';
 import { useGameFinished } from '../model/useGameFinished';
 import { SoloGameResult } from './SoloGameResult';
 import { TeamGameResult } from './TeamGameResult';

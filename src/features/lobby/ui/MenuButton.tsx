@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 
 import { cn } from '@/shared/lib';
-import { COLOR_MAP } from '../constants/colors';
+import { COLOR_MAP } from './styles';
 
 interface MenuButtonProps {
   icon: ReactNode;

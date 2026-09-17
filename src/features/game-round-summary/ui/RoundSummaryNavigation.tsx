@@ -1,5 +1,5 @@
-import { RANK_ICONS } from '../constants/rankIcon';
 import type { RoundResult } from '../model/types';
+import { RANK_ICONS } from './rankIcon';
 
 interface RoundSummaryNavigationProps {
   ranking: RoundResult[];

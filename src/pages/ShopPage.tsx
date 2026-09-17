@@ -1,6 +1,6 @@
 import { useNudgeListener } from '@/features/lobby';
+import { BackButton } from '@/features/navigate-back';
 import { useShop } from '@/features/shop';
-import { BackButton } from '@/shared/ui/BackButton';
 import { ShopProductList, ShopProfilePanel, ShopSidebar } from '@/widgets/shop';
 
 const ShopPage = () => {

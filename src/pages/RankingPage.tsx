@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 
 import { RankingBoard } from '@/assets';
+import { BackButton } from '@/features/navigate-back';
 import type { PeriodId, RankingCriteria } from '@/features/ranking';
 import {
   RankingDropdown,
@@ -9,7 +10,6 @@ import {
   RankingSidebar,
 } from '@/features/ranking';
 import { RANKING_MOCK_DATA } from '@/mocks/ranking.mock';
-import { BackButton } from '@/shared/ui/BackButton';
 
 const RankingPage = () => {
   const [selectedPeriod, setSelectedPeriod] = useState<PeriodId>('daily');

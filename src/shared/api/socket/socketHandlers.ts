@@ -1,12 +1,12 @@
-import { SOCKET_EVENTS } from '@/shared/api/socket';
-import { ITEM_METADATA } from '@/shared/constants/item';
 import type {
   GameItem,
   Player,
   SendMessageRequest,
   ThemeSelectingContext,
-} from '@/shared/model';
-import { PHASE_TIME, RANDOM_THEMES } from '@/shared/model';
+} from '../../model';
+import { ITEM_METADATA } from '../../model';
+import { PHASE_TIME, RANDOM_THEMES } from '../../model';
+import { SOCKET_EVENTS } from './constants';
 import type { MockSocket } from './mockSocket';
 
 export const handleLobbySend = (

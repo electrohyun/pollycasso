@@ -2,7 +2,7 @@ import { useInfiniteQuery } from '@tanstack/react-query';
 
 import type { RoomFilters } from '@/entities/room';
 import { roomQueries } from '@/entities/room';
-import type { RoomFilter } from '../constants/filters';
+import type { RoomFilter } from './filters';
 import { useRoomFilterStore } from './useRoomFilterStore';
 import { useSearchStore } from './useSearchStore';
 

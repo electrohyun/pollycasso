@@ -1,4 +1,4 @@
-import { THEME_STYLES, UI_TEXT } from '../constants/game';
+import { THEME_STYLES, UI_TEXT } from '../model/game';
 
 interface ThemeSelectorProps {
   isSelector: boolean;

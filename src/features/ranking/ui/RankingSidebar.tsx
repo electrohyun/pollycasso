@@ -1,7 +1,6 @@
-import { useSound } from '@/entities/sound';
-import { SOUND_ASSETS } from '@/shared/api/sound/assets';
-import { SoundManager } from '@/shared/api/sound/manager';
-import { PERIODS } from '../constants/constants';
+import { SOUND_ASSETS, SoundManager } from '@/shared/api';
+import { useSound } from '@/shared/lib';
+import { PERIODS } from '../model/rankingOptions';
 import type { PeriodId } from '../model/types';
 
 export const RankingSidebar = ({

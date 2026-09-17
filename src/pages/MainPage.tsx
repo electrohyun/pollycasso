@@ -1,20 +1,21 @@
 import { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router';
 
-import { MainChat } from '@/entities/chat';
-import { useSound } from '@/entities/sound';
 import { useAuthStore } from '@/entities/user';
 import { useLogout } from '@/features/auth';
+import { MainChat } from '@/features/chat';
 import {
-  CreateRoomModal,
   KickModal,
   MainHeader,
   RoomList,
-  useCreateRoomModalStore,
   useSearchStore,
 } from '@/features/main';
-import { SOUND_ASSETS } from '@/shared/api/sound/assets';
-import { SoundManager } from '@/shared/api/sound/manager';
+import {
+  CreateRoomModal,
+  useCreateRoomModalStore,
+} from '@/features/manage-room';
+import { SOUND_ASSETS, SoundManager } from '@/shared/api';
+import { useSound } from '@/shared/lib';
 import { Sidebar } from '@/widgets/sidebar';
 
 const MainPage = () => {

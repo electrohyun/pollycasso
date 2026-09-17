@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 
-import { COLORS } from '../constants/game';
+import { COLORS } from '../model/game';
 import { useGameTimer } from './useGameTimer';
 
 interface GameTimerProps {

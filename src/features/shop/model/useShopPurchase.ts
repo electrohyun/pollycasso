@@ -1,9 +1,8 @@
 import { useMemo, useState } from 'react';
 
 import type { Product } from '@/entities/product';
-import { useSound } from '@/entities/sound';
-import { SOUND_ASSETS } from '@/shared/api/sound/assets';
-import { SoundManager } from '@/shared/api/sound/manager';
+import { SOUND_ASSETS, SoundManager } from '@/shared/api';
+import { useSound } from '@/shared/lib';
 import type { PurchaseStatus } from './types';
 
 interface UseShopPurchaseProps {

@@ -1,8 +1,7 @@
 import { BellIcon } from '@heroicons/react/24/solid';
 
-import { useSound } from '@/entities/sound';
-import { SOUND_ASSETS } from '@/shared/api/sound/assets';
-import { SoundManager } from '@/shared/api/sound/manager';
+import { SOUND_ASSETS, SoundManager } from '@/shared/api';
+import { useSound } from '@/shared/lib';
 
 export const NotificationButton = () => {
   const { isMuted, sfxVolume } = useSound();

@@ -1,9 +1,8 @@
 import { useState } from 'react';
 
-import { useSound } from '@/entities/sound';
-import { SOUND_ASSETS } from '@/shared/api/sound/assets';
-import { SoundManager } from '@/shared/api/sound/manager';
-import { CRITERIA_LABELS } from '../constants/constants';
+import { SOUND_ASSETS, SoundManager } from '@/shared/api';
+import { useSound } from '@/shared/lib';
+import { CRITERIA_LABELS } from '../model/rankingOptions';
 import type { RankingCriteria } from '../model/types';
 
 interface RankingDropdownProps {

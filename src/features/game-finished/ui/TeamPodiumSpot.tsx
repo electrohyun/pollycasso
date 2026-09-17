@@ -1,5 +1,5 @@
 import { Coin, LaurelWreath } from '@/assets';
-import { TEAM_RANK_STYLES } from '../constants/styles';
+import { TEAM_RANK_STYLES } from './styles';
 
 interface PodiumSpotProps {
   rank: 1 | 2 | 3;

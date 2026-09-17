@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
-import { BRUSH_SIZES, DRAWING_CONSTANTS } from '../constants/drawingConstants';
-import { getSliderPercentage, isWhiteColor } from '../utils/colorUtils';
+import { getSliderPercentage, isWhiteColor } from '../lib/colorUtils';
+import { BRUSH_SIZES, DRAWING_CONSTANTS } from '../model/drawingConstants';
 
 interface BrushSizeSliderProps {
   strokeWidth: number;

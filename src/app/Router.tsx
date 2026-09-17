@@ -2,13 +2,10 @@ import { lazy, Suspense } from 'react';
 import { createBrowserRouter, Outlet, RouterProvider } from 'react-router';
 
 import { MOCK_GAME_SELECTING } from '@/mocks/game.mock';
-import { GameSocketProvider } from '@/shared/api/socket/GameSocketProvider';
-// import { GameSocketProvider } from '@/shared/api/socket/GameSocketProvider';
-// import { SoundProvider } from '@/entities/sound';
-import { WaitingSocketProvider } from '@/shared/api/socket/WaitingSocketProvider';
-import { RootLayout } from '@/shared/ui/RootLayout';
 import { Spinner } from '@/shared/ui/Spinner';
+import { RootLayout } from './layout/RootLayout';
 import PrivateRoute from './PrivateRoute';
+import { GameSocketProvider, WaitingSocketProvider } from './socket';
 
 const LoginPage = lazy(() => import('@/pages/LoginPage'));
 const LoginCallbackPage = lazy(() => import('@/pages/LoginCallbackPage'));
@@ -16,7 +13,9 @@ const SignupPage = lazy(() => import('@/pages/SignupPage'));
 const WelcomePage = lazy(() => import('@/pages/WelcomePage'));
 const MainPage = lazy(() => import('@/pages/MainPage'));
 const GamePage = lazy(() => import('@/pages/GamePage'));
-const GameWidget = lazy(() => import('@/widgets/game/ui/GameWidget'));
+const GameWidget = lazy(() =>
+  import('@/widgets/game').then(({ GameWidget }) => ({ default: GameWidget })),
+);
 const FriendPage = lazy(() => import('@/pages/FriendPage'));
 const ShopPage = lazy(() => import('@/pages/ShopPage'));
 const WardrobePage = lazy(() => import('@/pages/WardrobePage'));

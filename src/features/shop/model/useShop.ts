@@ -1,10 +1,10 @@
 import { useEffect, useMemo } from 'react';
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 
-import { useAuthStore } from '@/entities/user/model/useAuthStore';
-import { useWaitingSocket } from '@/shared/api/socket/waitingSocketContext';
-import { SHOP_CATEGORIES } from '../constants/shop.constants';
+import { useAuthStore } from '@/entities/user';
+import { useWaitingSocket } from '@/shared/api';
 import { shopQueries } from '../queries/shopQueries';
+import { PRODUCT_CATEGORIES } from './shopConfig';
 import type { CartItem } from './useCart';
 import { useCart } from './useCart';
 import { useProductSorting } from './useProductSorting';
@@ -31,7 +31,7 @@ export const useShop = () => {
     const consumables = (consumablesData?.items || []).map(
       (item: CartItem) => ({
         ...item,
-        subCategory: SHOP_CATEGORIES.ITEM,
+        subCategory: PRODUCT_CATEGORIES.ITEM,
       }),
     );
     return [...cosmetics, ...consumables];

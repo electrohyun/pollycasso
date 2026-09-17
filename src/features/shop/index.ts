@@ -1,4 +1,4 @@
-export * from './constants/shop.constants';
+export * from './model/shopConfig';
 export * from './model/types';
 export type { CartItem } from './model/useCart';
 export { useCart } from './model/useCart';

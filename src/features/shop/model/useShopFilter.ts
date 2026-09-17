@@ -1,9 +1,8 @@
 import { useState } from 'react';
 
-import { useSound } from '@/entities/sound';
-import { SOUND_ASSETS } from '@/shared/api/sound/assets';
-import { SoundManager } from '@/shared/api/sound/manager';
-import { SORT_OPTIONS } from '../constants/shop.constants';
+import { SOUND_ASSETS, SoundManager } from '@/shared/api';
+import { useSound } from '@/shared/lib';
+import { SORT_OPTIONS } from './shopConfig';
 import type { CategoryType, SortType } from './types';
 
 export const useShopFilter = () => {

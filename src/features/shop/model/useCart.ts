@@ -1,10 +1,9 @@
 import { useState } from 'react';
 
 import type { Product } from '@/entities/product';
-import { useSound } from '@/entities/sound';
-import { SOUND_ASSETS } from '@/shared/api/sound/assets';
-import { SoundManager } from '@/shared/api/sound/manager';
-import { SHOP_CATEGORIES } from '../constants/shop.constants';
+import { SOUND_ASSETS, SoundManager } from '@/shared/api';
+import { useSound } from '@/shared/lib';
+import { PRODUCT_CATEGORIES } from './shopConfig';
 
 export interface CartItem extends Product {
   quantity: number;
@@ -15,7 +14,7 @@ export const useCart = () => {
   const [cart, setCart] = useState<CartItem[]>([]);
 
   const addToCart = (product: Product) => {
-    const isConsumable = product.subCategory === SHOP_CATEGORIES.ITEM;
+    const isConsumable = product.subCategory === PRODUCT_CATEGORIES.ITEM;
 
     setCart((prev) => {
       const existingItem = prev.find((item) => item.id === product.id);

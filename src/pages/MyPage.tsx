@@ -4,7 +4,7 @@ import { useNavigate, useSearchParams } from 'react-router';
 import { useAuthStore } from '@/entities/user';
 import { useLogout } from '@/features/auth';
 import { ProfileSection, SettingsSection } from '@/features/mypage';
-import { BackButton } from '@/shared/ui/BackButton';
+import { BackButton } from '@/features/navigate-back';
 import { Sidebar } from '@/widgets/sidebar';
 
 const MyPage = () => {

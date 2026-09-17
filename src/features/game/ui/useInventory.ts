@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react';
 
 import type { GameItem, InventoryUIItem } from '@/shared/model';
-import { ALL_ITEMS_META } from '../constants/game';
+import { ALL_ITEMS_META } from '../model/game';
 
 const ITEMS_PER_PAGE = 5;
 

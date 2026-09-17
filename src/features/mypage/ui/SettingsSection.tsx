@@ -1,7 +1,6 @@
 import { useEnvironmentStore } from '@/entities/environment';
-import { useSoundStore } from '@/entities/sound';
-import { SOUND_ASSETS } from '@/shared/api/sound/assets';
-import { SoundManager } from '@/shared/api/sound/manager';
+import { SOUND_ASSETS, SoundManager } from '@/shared/api';
+import { useSoundStore } from '@/shared/lib';
 import { RangeSlider } from './RangeSlider';
 
 export const SettingsSection = () => {

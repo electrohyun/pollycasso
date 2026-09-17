@@ -1,5 +1,5 @@
-import { DRAWING_COLORS } from '../constants/drawingConstants';
-import { isWhiteColor } from '../utils/colorUtils';
+import { isWhiteColor } from '../lib/colorUtils';
+import { DRAWING_COLORS } from '../model/drawingConstants';
 
 interface ColorPaletteProps {
   selectedColor: string;

@@ -2,11 +2,9 @@ import { useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router';
 import { overlay } from 'overlay-kit';
 
-import { useSound } from '@/entities/sound';
-import { NudgeModal } from '@/features/lobby';
-import { getWaitingSocket } from '@/shared/api/socket';
-import { SOUND_ASSETS } from '@/shared/api/sound/assets';
-import { SoundManager } from '@/shared/api/sound/manager';
+import { getWaitingSocket, SOUND_ASSETS, SoundManager } from '@/shared/api';
+import { useSound } from '@/shared/lib';
+import { NudgeModal } from '../ui/NudgeModal';
 
 export const useNudgeListener = () => {
   const waitingSocket = getWaitingSocket();

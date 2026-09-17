@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import { useFriend } from '@/entities/friend';
-import { BackButton } from '@/features/add-friend/ui/BackButton';
+import { BackButton } from '@/features/navigate-back';
 import { FriendHeader, FriendList } from '@/widgets/friend';
 
 const FriendPage = () => {

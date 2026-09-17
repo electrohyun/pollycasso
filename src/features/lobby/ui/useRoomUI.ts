@@ -1,10 +1,11 @@
 import { useNavigate } from 'react-router';
 
-// TODO: FSD 원칙 위반 -> 리팩터링 필요
-import { useCreateRoomModalStore } from '@/features/main';
+import type { CreateRoomPayload } from '@/entities/room';
 import { useRoom } from '../model/useRoom';
 
-export const useRoomUI = () => {
+export const useRoomUI = (
+  openRoomSettings: (initialData: CreateRoomPayload) => void,
+) => {
   const navigate = useNavigate();
 
   const {
@@ -32,8 +33,6 @@ export const useRoomUI = () => {
       joinWithPassword,
     },
   } = useRoom();
-
-  const { open: openRoomSettingsModal } = useCreateRoomModalStore();
 
   const isMyTeamBlue = topTeamId === 'BLUE';
 
@@ -102,7 +101,7 @@ export const useRoomUI = () => {
       password: '',
     };
 
-    openRoomSettingsModal('EDIT', initialData);
+    openRoomSettings(initialData);
   };
 
   return {

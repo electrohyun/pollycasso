@@ -1,4 +1,4 @@
-export * from './constants/game';
+export * from './model/game';
 export { GameHeader } from './ui/GameHeader';
 export { GameSubmitButton } from './ui/GameSubmitButton';
 export { GameTimer } from './ui/GameTimer';

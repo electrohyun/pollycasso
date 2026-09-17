@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
-import { useSocket } from '@/shared/api/socket';
-import { UI_TEXT } from '../constants/game';
+import { useSocket } from '@/shared/api';
+import { UI_TEXT } from './game';
 
 type NotificationType = 'NORMAL' | 'ATTACK';
 
