@@ -1,5 +1,5 @@
 import type { DrawingTool } from '@/entities/drawing';
-import { ACTIVE_COLOR } from '../constants/drawingConstants';
+import { ACTIVE_COLOR } from '../model/drawingConstants';
 import { BrushSizeSlider } from './BrushSizeSlider';
 import { ColorPalette } from './ColorPalette';
 import { ToolSelector } from './ToolSelector';

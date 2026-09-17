@@ -1,8 +1,8 @@
 import { useMemo } from 'react';
 
 import type { Product } from '@/entities/product';
-import { SHOP_CATEGORIES } from '../constants/shop.constants';
 import type { CategoryType, SortType } from '../model/types';
+import { PRODUCT_CATEGORIES } from './shopConfig';
 
 export const useProductSorting = (
   activeCategory: CategoryType,
@@ -10,7 +10,7 @@ export const useProductSorting = (
   products: Product[],
 ) => {
   return useMemo(() => {
-    const targetCategoryLabel = SHOP_CATEGORIES[activeCategory];
+    const targetCategoryLabel = PRODUCT_CATEGORIES[activeCategory];
 
     const filtered = products.filter(
       (item) => item.subCategory === targetCategoryLabel,

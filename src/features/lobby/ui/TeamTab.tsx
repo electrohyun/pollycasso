@@ -1,5 +1,5 @@
 import { cn } from '@/shared/lib';
-import { ACTIVE_STYLE, DISABLED_STYLE, TEAM_COLORS } from '../constants/colors';
+import { ACTIVE_STYLE, DISABLED_STYLE, TEAM_COLORS } from './styles';
 
 interface TeamTabProps {
   teamId: 'BLUE' | 'RED';

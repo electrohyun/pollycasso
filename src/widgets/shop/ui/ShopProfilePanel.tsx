@@ -1,6 +1,6 @@
 import { Coin } from '@/assets';
-import { CharacterPreview } from '@/entities/character';
 import type { Product } from '@/entities/product';
+import { CharacterPreview } from '@/features/preview-outfit';
 import type { CartItem } from '@/features/shop';
 import { ShopPurchaseButton } from '@/features/shop';
 import { cn } from '@/shared/lib';

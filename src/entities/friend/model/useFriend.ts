@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo } from 'react';
 
-import { useFriendSocket } from '@/shared/api/socket/friendSocketContext';
+import { useFriendSocket } from '@/shared/api';
 import { useFriendStore } from './friendStore';
 
 export const useFriend = (searchKeyword: string = '') => {

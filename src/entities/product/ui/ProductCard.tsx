@@ -1,8 +1,8 @@
 import { Coin } from '@/assets';
-import { SHOP_CATEGORIES } from '@/features/shop/constants/shop.constants';
 import { cn } from '@/shared/lib';
 import { getShopItemUrl } from '@/shared/lib/assets';
 import { getLevelColor } from '@/shared/lib/color';
+import { PRODUCT_CATEGORIES } from '@/shared/model';
 import type { Product } from '../model/types';
 
 interface ProductItemProps {
@@ -22,7 +22,7 @@ export const ProductCard = ({
   onAddToCart,
   onWearItem,
 }: ProductItemProps) => {
-  const isConsumable = product.subCategory === SHOP_CATEGORIES.ITEM;
+  const isConsumable = product.subCategory === PRODUCT_CATEGORIES.ITEM;
 
   const isButtonDisabled = !isConsumable && (isInCart || isBuyDisabled);
 

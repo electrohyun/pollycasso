@@ -1,6 +1,6 @@
 import Marquee from 'react-fast-marquee';
 
-import { UI_TEXT } from '../constants/game';
+import { UI_TEXT } from '../model/game';
 
 interface GameHeaderProps {
   currentTheme: string | null;

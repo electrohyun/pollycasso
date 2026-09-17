@@ -1,8 +1,8 @@
 import { Receipt } from '@/assets';
 import type { Product } from '@/entities/product';
 import { cn } from '@/shared/lib';
+import { getTitleContent } from '../lib/getTitleContent';
 import { useShopPurchase } from '../model/useShopPurchase';
-import { getTitleContent } from '../utils/getTitleContent';
 import { PurchaseStatusContent } from './PurchaseStatusContent';
 
 interface ShopPurchaseModalProps {

@@ -1,12 +1,12 @@
 import { useEffect, useMemo } from 'react';
 
-import { CharacterPreview } from '@/entities/character';
-import { useNudgeListener } from '@/features/lobby/model/useNudgeListener';
+import { useNudgeListener } from '@/features/lobby';
+import { BackButton } from '@/features/navigate-back';
+import { CharacterPreview } from '@/features/preview-outfit';
 import { useShopPreview } from '@/features/shop';
 import { MOCK_PRODUCTS } from '@/mocks/shop.mock';
-import { useWaitingSocket } from '@/shared/api/socket/waitingSocketContext';
+import { useWaitingSocket } from '@/shared/api';
 import { cn } from '@/shared/lib';
-import { BackButton } from '@/shared/ui/BackButton';
 import { WardrobeProductList } from '@/widgets/wardrobe';
 import {
   useWardrobeFilter,

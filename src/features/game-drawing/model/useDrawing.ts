@@ -2,7 +2,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import type { KonvaEventObject } from 'konva/lib/Node';
 
 import type { DrawLine } from '@/entities/drawing';
-import { performFloodFill } from '../utils/floodFillUtils';
+import { performFloodFill } from '../lib/floodFillUtils';
 
 interface UseDrawingProps {
   tool: DrawLine['tool'];

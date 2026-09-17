@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-import { AUTH_MESSAGES } from '../constants/messages';
+import { AUTH_MESSAGES } from '../model/messages';
 
 export const usernameSchema = z
   .string()

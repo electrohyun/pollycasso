@@ -1,7 +1,14 @@
+export { ChatSocketContext, useChatSocket } from './chatSocketContext';
 export { getChatSocket } from './chatSocketInstance';
 export * from './constants';
+export { FriendSocketContext, useFriendSocket } from './friendSocketContext';
+export { getFriendSocket } from './friendSocketInstance';
+export { GameSocketContext, useGameSocket } from './gameSocketContext';
+export { getGameSocket } from './gameSocketInstance';
 export type { Socket } from './io';
 export { io } from './io';
+export { MockSocket } from './mockSocket';
 export { useSocket } from './socketContext';
 export { SocketContext } from './socketContext';
+export { useWaitingSocket, WaitingSocketContext } from './waitingSocketContext';
 export { getWaitingSocket } from './waitingSocketInstance';

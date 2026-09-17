@@ -1,19 +1,17 @@
 import { useCallback, useEffect, useState } from 'react';
 import { useLocation, useNavigate, useParams } from 'react-router';
 
-import { useSound } from '@/entities/sound';
 import { useAuthStore } from '@/entities/user';
-import { getWaitingSocket } from '@/shared/api/socket';
-import { SOUND_ASSETS } from '@/shared/api/sound/assets';
-import { SoundManager } from '@/shared/api/sound/manager';
+import { getWaitingSocket, SOUND_ASSETS, SoundManager } from '@/shared/api';
+import { useSound } from '@/shared/lib';
 import type { Player, RoomState, SystemNotification } from '@/shared/model';
-import { ENTRY_ERROR_MESSAGES } from '../constants/messages';
-import type { UpdateGameStatePayload } from '../model/types';
+import { ENTRY_ERROR_MESSAGES } from './messages';
 import {
   selectCanStartGame,
   selectMe,
   selectTopBottomTeams,
 } from './roomSelectors';
+import type { UpdateGameStatePayload } from './types';
 
 export const useRoom = () => {
   const navigate = useNavigate();

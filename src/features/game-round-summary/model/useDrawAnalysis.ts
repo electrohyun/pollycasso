@@ -1,16 +1,13 @@
 import { useMemo } from 'react';
 
 import type { DrawData } from '@/entities/drawing';
-import {
-  ACHIEVEMENT_THRESHOLDS,
-  STATS_CONSTANTS,
-} from '../constants/statsConstants';
-import type { AchievementID } from '../utils/achievementConfig';
-import { ACHIEVEMENT_CONFIG } from '../utils/achievementConfig';
+import type { AchievementID } from '../lib/achievementConfig';
+import { ACHIEVEMENT_CONFIG } from '../lib/achievementConfig';
 import {
   calculateTotalDistance,
   extractTopColors,
-} from '../utils/drawingAchievements';
+} from '../lib/drawingAchievements';
+import { ACHIEVEMENT_THRESHOLDS, STATS_CONSTANTS } from './statsConstants';
 
 export const useDrawAnalysis = (drawData: DrawData, score: number) => {
   // 가장 많이 사용한 3가지 색상

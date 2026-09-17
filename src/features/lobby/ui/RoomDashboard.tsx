@@ -1,16 +1,18 @@
+import type { ReactNode } from 'react';
 import { useNavigate } from 'react-router';
 import { ShoppingCartIcon } from '@heroicons/react/24/outline';
 import { ArchiveBoxIcon, Cog8ToothIcon } from '@heroicons/react/24/solid';
 
-import { GameChat } from '@/entities/chat';
 import { MenuButton } from './MenuButton';
 
 interface RoomDashboardProps {
+  chat: ReactNode;
   onOpenSettings?: () => void;
   onUpdateStatus: (status: 'IDLE' | 'SHOPPING' | 'CUSTOMIZING') => void;
 }
 
 export const RoomDashboard = ({
+  chat,
   onOpenSettings,
   onUpdateStatus,
 }: RoomDashboardProps) => {
@@ -45,9 +47,7 @@ export const RoomDashboard = ({
         />
       </div>
 
-      <div className="flex-1 min-h-0 mt-2">
-        <GameChat />
-      </div>
+      <div className="flex-1 min-h-0 mt-2">{chat}</div>
     </div>
   );
 };

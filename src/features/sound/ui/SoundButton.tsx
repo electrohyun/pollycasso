@@ -1,9 +1,8 @@
 import type { MouseEvent } from 'react';
 import { SpeakerWaveIcon, SpeakerXMarkIcon } from '@heroicons/react/24/outline';
 
-import { useSoundStore } from '@/entities/sound';
-import { SOUND_ASSETS } from '@/shared/api/sound/assets';
-import { SoundManager } from '@/shared/api/sound/manager';
+import { SOUND_ASSETS, SoundManager } from '@/shared/api';
+import { useSoundStore } from '@/shared/lib';
 
 export const SoundButton = () => {
   const { isMuted, toggleMute, bgmVolume } = useSoundStore();

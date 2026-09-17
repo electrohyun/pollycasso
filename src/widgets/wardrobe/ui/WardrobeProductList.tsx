@@ -1,5 +1,5 @@
 import type { Product } from '@/entities/product';
-import { WardrobeItemCard } from '@/entities/product/ui/WardrobeItemCard';
+import { WardrobeItemCard } from '@/entities/product';
 
 interface WardrobeProductListProps {
   products: Product[];

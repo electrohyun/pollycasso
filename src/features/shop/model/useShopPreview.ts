@@ -1,13 +1,9 @@
 import { useState } from 'react';
 
 import type { Product } from '@/entities/product';
-import { useSound } from '@/entities/sound';
-import {
-  CATEGORY_TO_OUTFIT_KEY,
-  SHOP_CATEGORIES,
-} from '@/features/shop/constants/shop.constants';
-import { SOUND_ASSETS } from '@/shared/api/sound/assets';
-import { SoundManager } from '@/shared/api/sound/manager';
+import { SOUND_ASSETS, SoundManager } from '@/shared/api';
+import { useSound } from '@/shared/lib';
+import { CATEGORY_TO_OUTFIT_KEY, PRODUCT_CATEGORIES } from './shopConfig';
 
 const ONE_PIECE_IMAGES = ['top_32', 'top_33', 'top_34', 'top_35'];
 
@@ -31,8 +27,8 @@ export const useShopPreview = () => {
       if (isSuit) {
         const preservedItems = prev.filter(
           (item) =>
-            item.subCategory === SHOP_CATEGORIES.BIRD ||
-            item.subCategory === SHOP_CATEGORIES.EFFECT,
+            item.subCategory === PRODUCT_CATEGORIES.BIRD ||
+            item.subCategory === PRODUCT_CATEGORIES.EFFECT,
         );
         if (!isMuted) SoundManager.playSfx(SOUND_ASSETS.SFX.CLICK, sfxVolume);
         return [...preservedItems, product];

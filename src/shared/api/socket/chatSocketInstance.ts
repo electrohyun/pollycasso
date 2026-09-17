@@ -1,12 +1,9 @@
-import { useAuthStore } from '@/entities/user';
 import type { Socket } from './io';
 import { io } from './io';
 
 let chatSocket: Socket | null = null;
 
-export const getChatSocket = (): Socket => {
-  const token = useAuthStore.getState().accessToken;
-
+export const getChatSocket = (token?: string | null): Socket => {
   if (!chatSocket) {
     chatSocket = io(`${import.meta.env.VITE_SOCKET_URL}/chat`, {
       transports: ['websocket'],
@@ -15,7 +12,7 @@ export const getChatSocket = (): Socket => {
     });
   }
 
-  if (chatSocket) {
+  if (token !== undefined) {
     chatSocket.auth = { token };
   }
 

@@ -1,10 +1,9 @@
 import { useNavigate } from 'react-router';
 
 import { Coin } from '@/assets';
-import { useSound } from '@/entities/sound';
 import { ScalableText } from '@/features/lobby';
-import { SOUND_ASSETS } from '@/shared/api/sound/assets';
-import { SoundManager } from '@/shared/api/sound/manager';
+import { SOUND_ASSETS, SoundManager } from '@/shared/api';
+import { useSound } from '@/shared/lib';
 import { getOutfitImageUrl, OUTFIT_LAYERS } from '@/shared/lib/cdn';
 import type { Outfit } from '@/shared/model';
 

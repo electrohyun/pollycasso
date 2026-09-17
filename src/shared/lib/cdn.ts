@@ -1,4 +1,4 @@
-import type { Outfit } from '@/shared/model';
+import type { Outfit } from '../model';
 
 export const CDN_BASE_URL = import.meta.env.VITE_ASSET_CDN_URL;
 

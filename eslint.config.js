@@ -11,7 +11,7 @@ import simpleImportSort from 'eslint-plugin-simple-import-sort';
 
 export default tseslint.config(
   {
-    ignores: ['dist', 'node_modules', 'public'],
+    ignores: ['dist', 'node_modules', 'public', 'storybook-static'],
   },
   {
     files: ['**/*.{ts,tsx}'],

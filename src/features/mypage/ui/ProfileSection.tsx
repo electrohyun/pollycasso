@@ -3,14 +3,16 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { isAxiosError } from 'axios';
 import { overlay } from 'overlay-kit';
 
-import { useSound } from '@/entities/sound';
 import type { User } from '@/entities/user';
-import { CreatorsModal } from '@/features/mypage/ui/CreatorsModal';
-import type { ApiFailureResponse } from '@/shared/api';
-import { SOUND_ASSETS } from '@/shared/api/sound/assets';
-import { SoundManager } from '@/shared/api/sound/manager';
+import {
+  type ApiFailureResponse,
+  SOUND_ASSETS,
+  SoundManager,
+} from '@/shared/api';
+import { useSound } from '@/shared/lib';
 import { Spinner } from '@/shared/ui/Spinner';
 import { type ProfileFormValues, profileUpdateSchema } from '../model/schema';
+import { CreatorsModal } from './CreatorsModal';
 import { CreditsModal } from './CreditsModal';
 import { ProfileInput } from './ProfileInput';
 

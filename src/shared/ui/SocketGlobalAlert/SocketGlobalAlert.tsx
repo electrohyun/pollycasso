@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 
-import { useSocket } from '@/shared/api/socket';
-import { showToast } from '@/shared/ui/Toast';
+import { useSocket } from '../../api';
+import { showToast } from '../Toast';
 
 interface NotificationPayload {
   status: number;

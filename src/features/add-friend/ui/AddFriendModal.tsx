@@ -8,10 +8,9 @@ import { FaceFrownIcon, XMarkIcon } from '@heroicons/react/24/solid';
 
 import { Title } from '@/assets';
 import { useFriend } from '@/entities/friend';
-import { RecommendedFriendCard } from '@/entities/friend/ui/RecommendedFriendCard';
-import { useSound } from '@/entities/sound';
-import { SOUND_ASSETS } from '@/shared/api/sound/assets';
-import { SoundManager } from '@/shared/api/sound/manager';
+import { RecommendedFriendCard } from '@/entities/friend';
+import { SOUND_ASSETS, SoundManager } from '@/shared/api';
+import { useSound } from '@/shared/lib';
 
 interface AddFriendModalProps {
   onClose: () => void;

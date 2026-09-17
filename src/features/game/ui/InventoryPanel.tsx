@@ -5,7 +5,7 @@ import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/24/outline';
 import { ItemIcon } from '@/entities/game';
 import { cn } from '@/shared/lib';
 import type { GameItem, InventoryUIItem } from '@/shared/model';
-import { COLORS } from '../constants/game';
+import { COLORS } from '../model/game';
 import { useInventory } from './useInventory';
 
 interface InventoryPanelProps {

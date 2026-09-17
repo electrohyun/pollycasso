@@ -1,6 +1,6 @@
 import type { ButtonHTMLAttributes, ReactNode } from 'react';
 
-import { cn } from '@/shared/lib';
+import { cn } from '../../lib';
 
 type ButtonVariant = 'primary' | 'kakao' | 'google' | 'destructive';
 

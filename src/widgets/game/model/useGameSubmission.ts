@@ -1,8 +1,7 @@
 import { useCallback, useMemo } from 'react';
 
 import { useAuthStore } from '@/entities/user';
-import { SOCKET_EVENTS } from '@/shared/api/socket';
-import { useGameSocket } from '@/shared/api/socket/gameSocketContext';
+import { SOCKET_EVENTS, useGameSocket } from '@/shared/api';
 import type { Player } from '@/shared/model';
 import { useGameState } from './useGameState';
 

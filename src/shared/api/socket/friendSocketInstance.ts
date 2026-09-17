@@ -1,12 +1,9 @@
-import { useAuthStore } from '@/entities/user';
 import type { Socket } from './io';
 import { io } from './io';
 
 let socket: Socket | null = null;
 
-export const getFriendSocket = (): Socket => {
-  const token = useAuthStore.getState().accessToken;
-
+export const getFriendSocket = (token?: string | null): Socket => {
   if (!socket) {
     socket = io(`${import.meta.env.VITE_SOCKET_URL}/friends`, {
       transports: ['websocket'],
@@ -15,7 +12,7 @@ export const getFriendSocket = (): Socket => {
     });
   }
 
-  if (socket) {
+  if (token !== undefined) {
     socket.auth = { token };
   }
 

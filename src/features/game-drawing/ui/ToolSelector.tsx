@@ -6,7 +6,7 @@ import {
   SparklesIcon,
 } from '@heroicons/react/24/solid';
 
-import { DRAWING_TOOLS } from '../constants/drawingConstants';
+import { DRAWING_TOOLS } from '../model/drawingConstants';
 
 export type DrawingToolType = (typeof DRAWING_TOOLS)[number]['id'];
 
