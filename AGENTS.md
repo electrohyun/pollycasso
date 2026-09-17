@@ -42,8 +42,8 @@ instructions.
 - Epic issues group related sub-issues and do not have their own Pull Request.
 - Each non-Epic issue must map to exactly one Pull Request, and each Pull
   Request must close exactly one non-Epic issue.
-- An issue may have multiple commits. Include that issue's number in every
-  commit message.
+- An issue may have multiple commits. Do not include the issue number in
+  individual commit messages; link the issue from the Pull Request body instead.
 - If work grows beyond the issue's completion criteria, create another issue
   instead of adding the extra scope to the same Pull Request.
 - Name branches as `<type>/<short-kebab-description>/#<issue-number>`. Example:
@@ -51,8 +51,7 @@ instructions.
 - Start branches from `main` unless the user explicitly requests a stacked Pull
   Request. A stacked Pull Request must target its parent branch.
 - Write commit messages and Pull Request titles as
-  `<type>: (#<issue-number>) <Korean description>`. Example:
-  `feat: (#12) 모킹 환경의 로그인 흐름 구현`.
+  `<type>: <Korean description>`.
 - Use the type that describes the work: `feat`, `fix`, `publish`, `refactor`,
   `docs`, or `chore`.
 - CI applies the matching work label from the Pull Request title prefix:
