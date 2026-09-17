@@ -45,6 +45,9 @@ jobs:
       - name: Lint
         run: pnpm lint
 
+      - name: Check architecture
+        run: pnpm architecture
+
       - name: Check formatting
         run: pnpm format:check
 
